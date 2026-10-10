@@ -1203,7 +1203,8 @@ a.contact-item-val:hover {
   margin-bottom: 2rem;
 }
 
-.subscribe-input-group {
+.subscribe-input-group,
+.subscribe-action {
   display: flex;
   flex-direction: column;
   gap: 1rem;
