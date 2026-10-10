@@ -481,7 +481,7 @@ p {
 
 @media (min-width: 992px) {
   .hero-grid {
-    grid-template-columns: 1fr 1.05fr;
+    grid-template-columns: 1fr 1.12fr;
     gap: 3.5rem;
   }
 }
@@ -581,13 +581,13 @@ p {
 .hero-visual-card {
   position: relative;
   width: 100%;
-  max-width: 540px;
+  max-width: 590px;
   background-color: #FFFFFF;
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.12), 0 0 0 1px rgba(15, 23, 42, 0.05);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
-  padding: 1.5rem 1.5rem 6.5rem 1.5rem;
+  padding: 1.75rem 1.75rem 6.75rem 1.75rem;
 }
 
 .hero-visual-card:hover {
@@ -596,13 +596,13 @@ p {
 }
 
 .hero-img {
-  width: 72%;
-  max-width: 340px;
+  width: 76%;
+  max-width: 380px;
   height: auto;
-  max-height: 290px;
+  max-height: 310px;
   object-fit: contain;
   display: block;
-  margin: 0 auto 1.25rem auto;
+  margin: 0 auto 1.5rem auto;
   background-color: transparent;
 }
 
