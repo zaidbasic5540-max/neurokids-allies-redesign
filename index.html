@@ -19,10 +19,10 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="Images/favicon.png">
   
-  <!-- Modern Typography (Plus Jakarta Sans) -->
+  <!-- Modern Typography (Plus Jakarta Sans & Nunito) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
@@ -37,7 +37,12 @@
   <header class="header" role="banner">
     <div class="container header-container">
       <a href="#hero" class="brand-logo-link" aria-label="NeuroKids Allies Homepage">
-        <img src="Images/logo-cropped.png" alt="NeuroKids Allies logo - Overcoming Stigma • Building Dignity" class="brand-logo-img" width="240" height="58">
+        <img src="Images/only logo no text.png" alt="NeuroKids Allies emblem" class="brand-logo-icon" width="70" height="52">
+        <div class="brand-text-block">
+          <span class="brand-name">Neuro Kids Allies</span>
+          <span class="brand-divider-line" aria-hidden="true"></span>
+          <span class="brand-tagline">Overcoming Stigma • Building Dignity</span>
+        </div>
       </a>
 
       <!-- Desktop Navigation Menu -->
@@ -50,6 +55,14 @@
 
       <!-- Header Action -->
       <div class="nav-actions">
+        <!-- Search Icon Button matching reference visual hierarchy -->
+        <button id="header-search-btn" class="header-search-btn" aria-label="Search" title="Search resources">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
         <a href="https://preview.mailerlite.io/forms/2009995/176619972987978844/share" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm nav-cta-btn">
           <span>Subscribe</span>
           <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -91,105 +104,57 @@
 
   <main id="main-content">
     <!-- =========================================================================
-         HERO SECTION — CONFIDENT EDITORIAL HERO LAYOUT
+         HERO SECTION — FULL-WIDTH BACKGROUND PHOTO WITH DARK GRADIENT OVERLAY
+         Visual hierarchy matching reference design: full-width photo, dark overlay,
+         bold headline with brand-gradient word, supporting text, two buttons (filled & outlined).
          ========================================================================= -->
-    <section id="hero" class="hero-section" aria-labelledby="hero-heading">
-      <div class="ambient-glow-1" aria-hidden="true"></div>
-      <div class="ambient-glow-2" aria-hidden="true"></div>
+    <section id="hero" class="hero-section hero-fullwidth" aria-labelledby="hero-heading">
+      <div class="hero-overlay" aria-hidden="true"></div>
 
-      <div class="container">
-        <div class="hero-grid">
-          <!-- Left Column: Typography, Tagline, Mission, and CTAs -->
-          <div class="hero-content">
-            <div class="pill-badge">
-              <span class="pill-dot"></span>
-              <span>Overcoming Stigma • Building Dignity</span>
-            </div>
-
-            <!-- Crisp, balanced headline with reduced line length and highlighted accent word -->
-            <h1 id="hero-heading" class="hero-title">
-              Preventing breakdowns &amp; <span class="highlight-accent">reconciling</span> fractured relationships.
-            </h1>
-
-            <p class="hero-lead">
-              Reconciling relationships fractured by misinterpretations of neurodivergent children’s experiences.
-            </p>
-
-            <!-- Prominent Callout Box -->
-            <div class="hero-quote-box">
-              <p class="hero-quote-text">
-                One less child stigmatized. One less parent judged.
-              </p>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="hero-actions">
-              <a href="https://preview.mailerlite.io/forms/2009995/176619972987978844/share" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
-                <span>Subscribe To Receive Allyship Resources</span>
-                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </a>
-
-              <a href="#resources" class="btn btn-secondary btn-lg">
-                <span>Explore Resources</span>
-              </a>
-            </div>
-
-            <!-- Verification & Trust Indicators -->
-            <div class="hero-trust-bar">
-              <div class="trust-item">
-                <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-                <span>Ontario, Hamilton (Canada)</span>
-              </div>
-              <div class="trust-item">
-                <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                </svg>
-                <span>Empathy-Centered Allyship</span>
-              </div>
-              <div class="trust-item">
-                <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                </svg>
-                <span>Lived Experience Grounded</span>
-              </div>
-            </div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <!-- Tagline Kicker Pill -->
+          <div class="hero-kicker">
+            <span class="hero-kicker-dot"></span>
+            <span>OVERCOMING STIGMA • BUILDING DIGNITY</span>
           </div>
 
-          <!-- Right Column: Cropped Real Hero Photo (Enlarged and padding removed) -->
-          <div class="hero-visual-wrapper">
-            <div class="hero-visual-card">
-              <img 
-                src="Images/hero-library-kids-cropped.png" 
-                alt="A smiling adult woman with three young children playing together with colorful wooden blocks at a table in a library" 
-                class="hero-img"
-                width="809"
-                height="651"
-                loading="eager"
-              >
-              <!-- Floating Micro-Card / Chip -->
-              <div class="hero-floating-chip">
-                <div class="chip-icon-box">
-                  <svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                  </svg>
-                </div>
-                <div>
-                  <p class="chip-text-title">Empathy &amp; Belonging</p>
-                  <p class="chip-text-subtitle">Creating spaces where neurodivergent children are accepted as they are</p>
-                </div>
-              </div>
-            </div>
+          <!-- Bold headline with one word given brand-gradient treatment -->
+          <h1 id="hero-heading" class="hero-title">
+            Preventing breakdowns &amp; <span class="brand-gradient-word">reconciling</span> fractured relationships.
+          </h1>
+
+          <p class="hero-lead">
+            Reconciling relationships fractured by misinterpretations of neurodivergent children’s experiences.
+          </p>
+
+          <!-- Prominent Callout Quote -->
+          <div class="hero-quote-box">
+            <p class="hero-quote-text">
+              One less child stigmatized. One less parent judged.
+            </p>
+          </div>
+
+          <!-- Two Buttons: One Filled (Brand Purple), One Outlined (White/Semi-transparent) -->
+          <div class="hero-actions">
+            <a href="https://preview.mailerlite.io/forms/2009995/176619972987978844/share" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg hero-btn-filled">
+              <span>Subscribe To Receive Allyship Resources</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+
+            <a href="#resources" class="btn btn-hero-outline btn-lg">
+              <span>Explore Resources</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
           </div>
         </div>
+      </div>
     </section>
 
     <!-- =========================================================================
@@ -197,17 +162,30 @@
          ========================================================================= -->
     <section id="about" class="section about-section" aria-labelledby="about-heading">
       <div class="container">
-        <div class="section-header">
-          <div class="pill-badge pill-badge-purple">
-            <span class="pill-dot"></span>
-            <span>About Us</span>
+        <!-- Section Header with subtle branded decorative rays matching reference design -->
+        <div class="section-header section-header-with-rays">
+          <div class="decorative-rays rays-left" aria-hidden="true">
+            <span class="ray ray-purple"></span>
+            <span class="ray ray-pink"></span>
+            <span class="ray ray-teal"></span>
           </div>
-          <h2 id="about-heading" class="section-title">
-            Fostering Reconciliation, Belonging &amp; Inclusion
-          </h2>
-          <p class="section-subtitle">
-            Addressing the root causes of misunderstanding across all environments where children grow.
-          </p>
+          <div class="header-center-text">
+            <div class="pill-badge pill-badge-purple">
+              <span class="pill-dot"></span>
+              <span>About Us</span>
+            </div>
+            <h2 id="about-heading" class="section-title">
+              Fostering Reconciliation, Belonging &amp; Inclusion
+            </h2>
+            <p class="section-subtitle">
+              Addressing the root causes of misunderstanding across all environments where children grow.
+            </p>
+          </div>
+          <div class="decorative-rays rays-right" aria-hidden="true">
+            <span class="ray ray-purple"></span>
+            <span class="ray ray-pink"></span>
+            <span class="ray ray-teal"></span>
+          </div>
         </div>
 
         <!-- Primary Mission Box -->
@@ -220,68 +198,117 @@
           </p>
         </div>
 
-        <!-- Three Core Pillar Cards (Real images extracted from the live site) -->
+        <!-- Three Core Pillar Cards (Restyled matching reference 3-card layout: rounded photo top, floating tinted icon badge, clean card body, Learn More link) -->
         <div class="pillars-grid">
           <!-- Pillar 1: Neuro Bias -->
-          <article class="pillar-card">
+          <article class="pillar-card pillar-card-purple">
             <div class="pillar-img-box">
               <img 
                 src="Images/about-neuro-bias.png" 
                 alt="Young girl covering her ears in distress due to sensory overload and neuro-bias" 
                 class="pillar-img" 
                 width="500" 
-                height="500"
+                height="346"
                 loading="lazy"
               >
             </div>
             <div class="pillar-body">
-              <span class="pillar-tag">Root Misconceptions</span>
+              <!-- Floating tinted circular icon badge -->
+              <div class="pillar-floating-badge badge-purple" aria-hidden="true">
+                <svg class="pillar-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+
+              <span class="pillar-tag tag-purple">Root Misconceptions</span>
               <h3 class="pillar-title">Neuro Bias</h3>
               <p class="pillar-desc">
                 Misunderstanding, exclusion, and demeaning assumptions about neurodivergent children have led to broken relationships, isolation, and unresolved trauma for neurodivergent families.
               </p>
+              
+              <a href="#resources" class="pillar-learn-more link-purple">
+                <span>Learn More</span>
+                <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
             </div>
           </article>
 
           <!-- Pillar 2: Isolation -->
-          <article class="pillar-card">
+          <article class="pillar-card pillar-card-pink">
             <div class="pillar-img-box">
               <img 
                 src="Images/about-isolation.png" 
                 alt="Mother sitting on the floor consoling her child in a quiet hallway corner" 
                 class="pillar-img" 
-                width="500" 
-                height="500"
+                width="476" 
+                height="320"
                 loading="lazy"
               >
             </div>
             <div class="pillar-body">
-              <span class="pillar-tag">Emotional Impact</span>
+              <!-- Floating tinted circular icon badge -->
+              <div class="pillar-floating-badge badge-pink" aria-hidden="true">
+                <svg class="pillar-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </div>
+
+              <span class="pillar-tag tag-pink">Emotional Impact</span>
               <h3 class="pillar-title">Isolation</h3>
               <p class="pillar-desc">
                 Children grow up internalizing exclusion and shame inherited from stigmatizing experiences. Families withdraw from gatherings and relationships, knowing their differently abled children will be stigmatized.
               </p>
+
+              <a href="#resources" class="pillar-learn-more link-pink">
+                <span>Learn More</span>
+                <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
             </div>
           </article>
 
           <!-- Pillar 3: Community Segregation -->
-          <article class="pillar-card">
+          <article class="pillar-card pillar-card-teal">
             <div class="pillar-img-box">
               <img 
                 src="Images/about-community-segregation.png" 
                 alt="A supportive family embracing tightly together outdoors in unity" 
                 class="pillar-img" 
                 width="500" 
-                height="500"
+                height="330"
                 loading="lazy"
               >
             </div>
             <div class="pillar-body">
-              <span class="pillar-tag">Community Fracture</span>
+              <!-- Floating tinted circular icon badge -->
+              <div class="pillar-floating-badge badge-teal" aria-hidden="true">
+                <svg class="pillar-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+              </div>
+
+              <span class="pillar-tag tag-teal">Community Fracture</span>
               <h3 class="pillar-title">Community Segregation</h3>
               <p class="pillar-desc">
                 Communities and faith groups lose families who no longer feel welcome.
               </p>
+
+              <a href="#resources" class="pillar-learn-more link-teal">
+                <span>Learn More</span>
+                <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
             </div>
           </article>
         </div>
@@ -309,9 +336,9 @@
         <!-- 3 Resource Cards with Configurable Download Buttons -->
         <div class="resources-grid">
           <!-- Resource 1: For Children -->
-          <article class="resource-card">
+          <article class="resource-card resource-card-purple">
             <div class="resource-card-top">
-              <div class="resource-icon-badge">
+              <div class="resource-icon-badge badge-purple">
                 <svg class="resource-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <circle cx="12" cy="12" r="10"></circle>
                   <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
@@ -319,7 +346,7 @@
                   <line x1="15" y1="9" x2="15.01" y2="9"></line>
                 </svg>
               </div>
-              <p class="resource-category">Play &amp; Storytelling</p>
+              <p class="resource-category tag-purple">Play &amp; Storytelling</p>
               <h3 class="resource-title">For Children</h3>
               <p class="resource-description">
                 Engage with social cue games, storytelling, and guided conversations to build empathy in children towards their neurodivergent peers.
@@ -346,9 +373,9 @@
           </article>
 
           <!-- Resource 2: For Individuals & Social Gatherings -->
-          <article class="resource-card">
+          <article class="resource-card resource-card-pink">
             <div class="resource-card-top">
-              <div class="resource-icon-badge">
+              <div class="resource-icon-badge badge-pink">
                 <svg class="resource-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                   <circle cx="9" cy="7" r="4"></circle>
@@ -356,7 +383,7 @@
                   <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                 </svg>
               </div>
-              <p class="resource-category">Homes &amp; Families</p>
+              <p class="resource-category tag-pink">Homes &amp; Families</p>
               <h3 class="resource-title">For Individuals &amp; Social Gatherings</h3>
               <p class="resource-description">
                 Resources that affirm neurodivergent children and families across homes and social gatherings.
@@ -383,16 +410,16 @@
           </article>
 
           <!-- Resource 3: For Communities & Places of Faith -->
-          <article class="resource-card">
+          <article class="resource-card resource-card-teal">
             <div class="resource-card-top">
-              <div class="resource-icon-badge">
+              <div class="resource-icon-badge badge-teal">
                 <svg class="resource-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M3 21h18"></path>
                   <path d="M5 21V7l7-4 7 4v14"></path>
                   <path d="M10 9a2 2 0 0 1 4 0v12h-4z"></path>
                 </svg>
               </div>
-              <p class="resource-category">Faith &amp; Leadership</p>
+              <p class="resource-category tag-teal">Faith &amp; Leadership</p>
               <h3 class="resource-title">For Communities &amp; Places of Faith</h3>
               <p class="resource-description">
                 Specialized resource materials for community and faith groups looking to foster neuro-affirming spaces.
@@ -618,8 +645,13 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <a href="#hero">
-            <img src="Images/logo-cropped.png" alt="NeuroKids Allies logo" class="footer-logo-img" width="240" height="58">
+          <a href="#hero" class="brand-logo-link footer-brand-link" aria-label="NeuroKids Allies Homepage">
+            <img src="Images/only logo no text.png" alt="NeuroKids Allies emblem" class="brand-logo-icon" width="70" height="52">
+            <div class="brand-text-block">
+              <span class="brand-name">Neuro Kids Allies</span>
+              <span class="brand-divider-line" aria-hidden="true"></span>
+              <span class="brand-tagline">Overcoming Stigma • Building Dignity</span>
+            </div>
           </a>
           <p class="footer-tagline">
             Overcoming Stigma • Building Dignity. Neuro-affirming resources that help children, families, and communities unlearn assumptions and choose kindness.
