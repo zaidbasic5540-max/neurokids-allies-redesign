@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 220" width="100%" height="100%" aria-hidden="true">
+  <defs>
+    <!-- Soft lavender gradient for primary blob -->
+    <linearGradient id="whyLavenderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E9D5FF"/>
+      <stop offset="100%" stop-color="#DDD6FE"/>
+    </linearGradient>
+    <!-- Soft cyan gradient for secondary overlapping blob -->
+    <linearGradient id="whyCyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BAE6FD"/>
+      <stop offset="100%" stop-color="#7DD3FC"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left: Organic Lavender Kidney/Bean Shape -->
+  <path d="M 50 65 C 20 30 55 10 105 18 C 150 25 158 75 125 118 C 95 155 35 140 22 108 C 12 85 30 75 50 65 Z" 
+        fill="url(#whyLavenderGrad)" />
+
+  <!-- Lower Left: Overlapping Cyan/Sky Blue Blob -->
+  <path d="M 28 112 C 15 145 42 192 88 190 C 130 188 142 152 118 126 C 92 98 46 88 28 112 Z" 
+        fill="url(#whyCyanGrad)" 
+        fill-opacity="0.82"
+        style="mix-blend-mode: multiply;" />
+
+  <!-- Radiating Sunburst Rays around 'Why' -->
+  <g stroke="#C4B5FD" stroke-width="4.5" stroke-linecap="round">
+    <line x1="140" y1="36" x2="154" y2="22"/>
+    <line x1="170" y1="58" x2="188" y2="50"/>
+    <line x1="180" y1="94" x2="202" y2="94"/>
+    <line x1="172" y1="130" x2="192" y2="142"/>
+    <line x1="144" y1="162" x2="154" y2="182"/>
+  </g>
+
+  <!-- 'Our' Text: Bold Editorial Serif in Deep Navy -->
+  <text x="86" y="94" 
+        font-family="Georgia, 'Times New Roman', serif" 
+        font-weight="700" 
+        font-size="38" 
+        fill="#0B1B3D" 
+        letter-spacing="-0.5">Our</text>
+
+  <!-- 'Why' Text: Spirited Cursive/Brush in Vibrant Violet -->
+  <text x="104" y="146" 
+        font-family="'Caveat', 'Playpen Sans', 'Segoe Script', cursive" 
+        font-weight="700" 
+        font-size="52" 
+        fill="#7C3AED" 
+        transform="rotate(-4 104 146)">Why</text>
+</svg>

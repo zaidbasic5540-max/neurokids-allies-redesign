@@ -694,11 +694,11 @@ p {
 }
 
 .hero-lead {
-  font-size: clamp(0.85rem, 1vw, 0.9375rem);
-  line-height: 1.5;
+  font-size: clamp(0.875rem, 1.05vw, 0.96875rem);
+  line-height: 1.55;
   color: #E2E8F0;
-  margin-bottom: 1rem;
-  max-width: 430px;
+  margin-bottom: 1.45rem;
+  max-width: 460px;
 }
 
 /* Compact Callout Quote */
@@ -1343,6 +1343,125 @@ p {
 .config-notice-text {
   font-size: 0.875rem;
   color: var(--color-text-muted);
+}
+
+/* ==============================================================================
+   WHY NEUROKIDS ALLIES EXISTS SECTION
+   ============================================================================== */
+.why-section {
+  background-color: #FFFFFF;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.why-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 3rem 2.75rem;
+  box-shadow: var(--shadow-subtle);
+  display: flex;
+  align-items: center;
+  gap: 2.75rem;
+  transition: all var(--transition-base);
+}
+
+.why-card:hover {
+  box-shadow: var(--shadow-card);
+  border-color: var(--color-border-hover);
+}
+
+.why-visual-col {
+  flex-shrink: 0;
+  width: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-graphic-wrapper {
+  width: 100%;
+  max-width: 210px;
+  transition: transform var(--transition-base);
+}
+
+.why-card:hover .why-graphic-wrapper {
+  transform: scale(1.03);
+}
+
+.why-graphic-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.why-divider {
+  width: 1.5px;
+  background-color: #E2E8F0;
+  align-self: stretch;
+  flex-shrink: 0;
+}
+
+.why-content-col {
+  flex-grow: 1;
+}
+
+.why-title {
+  font-family: var(--font-sans);
+  font-size: clamp(1.65rem, 2.5vw, 2.15rem);
+  font-weight: 800;
+  color: var(--color-text-main);
+  margin-bottom: 1.25rem;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+
+.why-text-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.05rem;
+}
+
+.why-p {
+  font-size: 0.96875rem;
+  line-height: 1.72;
+  color: #334155;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .why-section {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  
+  .why-card {
+    flex-direction: column;
+    padding: 2.25rem 1.5rem;
+    gap: 1.75rem;
+    text-align: left;
+  }
+
+  .why-visual-col {
+    width: 100%;
+  }
+
+  .why-graphic-wrapper {
+    max-width: 180px;
+  }
+
+  .why-divider {
+    width: 60px;
+    height: 2px;
+    align-self: center;
+    background-color: #E2E8F0;
+  }
+
+  .why-title {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
 }
 
 /* ==============================================================================

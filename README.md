@@ -1,6 +1,6 @@
 # NeuroKids Allies — Redesigned Nonprofit Website
 
-Official modern redesign for **NeuroKids Allies Inc.**, an empathy-centered allyship nonprofit dedicated to overcoming stigma and building dignity for neurodivergent children and their families.
+Official modern redesign for **NeuroKids Allies Inc.** — *Choosing To Understand*. An empathy-centered allyship nonprofit dedicated to creating belonging for neurodivergent children and their families.
 
 Founded by **Omotayo Senbore**, based in Ontario, Hamilton (Canada).
 
