@@ -141,11 +141,69 @@ function initNavigation() {
     }
   }
 
-  // Instant click feedback for nav links
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.forEach(l => l.classList.remove('active'));
-      link.classList.add('active');
+  // Handle smooth scroll for internal anchor links with exact header height offset
+  const allInternalAnchors = document.querySelectorAll('a[href^="#"]');
+
+  allInternalAnchors.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const href = link.getAttribute('href');
+      if (!href || href === '#' || href === '#!') return;
+
+      const targetId = href.substring(1);
+      
+      // Determine real target section
+      let targetSection = document.getElementById(targetId);
+      if (targetId === 'about') {
+        targetSection = document.getElementById('why-we-exist') || targetSection;
+      } else if (targetId === 'be-an-ally' || targetId === 'get-involved' || targetId === 'resources') {
+        targetSection = document.getElementById('contact') || targetSection;
+      }
+
+      if (targetSection) {
+        e.preventDefault();
+
+        // Close mobile drawer if open
+        if (mobileDrawer && mobileDrawer.classList.contains('open')) {
+          toggleMobileMenu(false);
+        }
+
+        // Measure live header height
+        const liveHeader = document.querySelector('.header');
+        const headerHeight = liveHeader ? liveHeader.getBoundingClientRect().height : 86;
+
+        // Calculate target's absolute top
+        const rect = targetSection.getBoundingClientRect();
+        const absoluteTop = rect.top + window.pageYOffset;
+
+        // Position section start exactly at the bottom of the sticky header (0px of previous section visible)
+        const scrollTarget = Math.max(0, Math.round(absoluteTop - headerHeight));
+
+        window.scrollTo({
+          top: scrollTarget,
+          behavior: 'smooth'
+        });
+
+        // Update URL hash cleanly
+        if (history.pushState) {
+          history.pushState(null, null, href);
+        }
+
+        // Update active classes
+        navLinks.forEach(l => {
+          if (l.getAttribute('href') === href) {
+            l.classList.add('active');
+          } else {
+            l.classList.remove('active');
+          }
+        });
+        mobileLinks.forEach(l => {
+          if (l.getAttribute('href') === href) {
+            l.classList.add('active');
+          } else {
+            l.classList.remove('active');
+          }
+        });
+      }
     });
   });
 
