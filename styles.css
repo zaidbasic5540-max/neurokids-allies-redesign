@@ -434,19 +434,27 @@ p {
   .nav-menu {
     display: flex;
     align-items: center;
-    gap: 2.25rem;
+    gap: 1.35rem;
     list-style: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav-menu {
+    gap: 1.85rem;
   }
 }
 
 .nav-link {
   color: var(--color-text-main);
   text-decoration: none;
-  font-size: 0.9375rem;
-  font-weight: 600;
-  padding: 0.5rem 0.25rem;
+  font-size: 0.84375rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 0.2rem;
   position: relative;
   transition: color var(--transition-fast);
+  white-space: nowrap;
 }
 
 .nav-link::after {
@@ -499,6 +507,11 @@ p {
 
 .nav-cta-btn {
   display: none;
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 0.65rem 1.15rem;
+  white-space: nowrap;
 }
 
 @media (min-width: 640px) {
@@ -829,6 +842,7 @@ p {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
   position: relative;
+  scroll-margin-top: 80px;
 }
 
 @media (min-width: 768px) {

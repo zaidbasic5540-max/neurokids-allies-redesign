@@ -141,25 +141,61 @@ function initNavigation() {
     }
   }
 
-  // Active section indicator in nav
+  // Instant click feedback for nav links
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+
+  // Active section indicator on scroll
   function highlightActiveNav() {
-    const sections = document.querySelectorAll('section[id]');
     const scrollY = window.pageYOffset;
+    const isAtBottom = (window.innerHeight + scrollY) >= (document.documentElement.scrollHeight - 60);
 
-    sections.forEach(current => {
-      const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop - 120;
-      const sectionId = current.getAttribute('id');
-      const matchingLink = document.querySelector(`.nav-link[href*="${sectionId}"]`);
+    // Section definitions with their corresponding primary nav href
+    const sectionTargets = [
+      { id: 'what-we-do', href: '#what-we-do' },
+      { id: 'why-we-exist', href: '#about' },
+      { id: 'founder', href: '#about' },
+      { id: 'contact', href: '#get-involved' }
+    ];
 
-      if (matchingLink) {
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-          matchingLink.classList.add('active');
-        } else {
-          matchingLink.classList.remove('active');
+    let activeHref = null;
+
+    if (isAtBottom) {
+      activeHref = '#get-involved';
+    } else {
+      for (const target of sectionTargets) {
+        const el = document.getElementById(target.id);
+        if (el) {
+          const top = el.offsetTop - 140;
+          const height = el.offsetHeight;
+          if (scrollY >= top && scrollY < top + height) {
+            activeHref = target.href;
+          }
         }
       }
-    });
+    }
+
+    if (activeHref) {
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === activeHref) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+
+      mobileLinks.forEach(link => {
+        if (link.getAttribute('href') === activeHref) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    }
   }
 }
 
