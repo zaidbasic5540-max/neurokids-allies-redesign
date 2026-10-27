@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initResourceButtons();
   initSubscribeForm();
   initPolicyModals();
+  initPillarAlignment();
 });
 
 /**
@@ -383,3 +384,56 @@ function showToast(message) {
     }, 350);
   }, 4000);
 }
+
+/**
+ * ------------------------------------------------------------------------------
+ * Dynamic Pillar Card Elements Alignment
+ * Ensures card titles, descriptions, and resource callout boxes start and end
+ * at the exact same vertical heights across all 3 cards on desktop / tablet.
+ * ------------------------------------------------------------------------------
+ */
+function initPillarAlignment() {
+  const alignCards = () => {
+    const titles = document.querySelectorAll('.pillar-title');
+    const descs = document.querySelectorAll('.pillar-desc');
+    const callouts = document.querySelectorAll('.pillar-resource-callout');
+
+    if (!titles.length || !descs.length || !callouts.length) return;
+
+    // Reset inline heights first so natural content height can be measured accurately
+    titles.forEach(el => el.style.minHeight = '');
+    descs.forEach(el => el.style.minHeight = '');
+    callouts.forEach(el => el.style.minHeight = '');
+
+    // Only equalize on multi-column viewports (>= 768px)
+    if (window.innerWidth >= 768) {
+      let maxTitleH = 0;
+      let maxDescH = 0;
+      let maxCalloutH = 0;
+
+      titles.forEach(el => { maxTitleH = Math.max(maxTitleH, el.offsetHeight); });
+      descs.forEach(el => { maxDescH = Math.max(maxDescH, el.offsetHeight); });
+      callouts.forEach(el => { maxCalloutH = Math.max(maxCalloutH, el.offsetHeight); });
+
+      titles.forEach(el => { el.style.minHeight = `${maxTitleH}px`; });
+      descs.forEach(el => { el.style.minHeight = `${maxDescH}px`; });
+      callouts.forEach(el => { el.style.minHeight = `${maxCalloutH}px`; });
+    }
+  };
+
+  alignCards();
+
+  // Re-align on resize with debounce
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(alignCards, 50);
+  });
+
+  // Re-run after fonts or images finish loading
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(alignCards);
+  }
+  window.addEventListener('load', alignCards);
+}
+

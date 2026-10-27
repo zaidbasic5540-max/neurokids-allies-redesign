@@ -25,7 +25,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Nunito:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=1.6">
+  <link rel="stylesheet" href="styles.css?v=1.8">
 </head>
 <body>
   <!-- Accessible Skip Navigation -->
@@ -47,8 +47,8 @@
 
       <!-- Desktop Navigation Menu -->
       <nav class="nav-menu" aria-label="Main Navigation">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#resources" class="nav-link">Resources</a>
+        <a href="#what-we-do" class="nav-link">What We Do</a>
+        <a href="#why-we-exist" class="nav-link">Why We Exist</a>
         <a href="#founder" class="nav-link">About The Founder</a>
         <a href="#contact" class="nav-link">Contact Us</a>
       </nav>
@@ -85,8 +85,8 @@
     <!-- Mobile Slide-Down Drawer -->
     <div id="mobile-drawer" class="mobile-drawer" aria-label="Mobile Navigation">
       <ul class="mobile-nav-list">
-        <li><a href="#about" class="mobile-nav-link">About</a></li>
-        <li><a href="#resources" class="mobile-nav-link">Resources</a></li>
+        <li><a href="#what-we-do" class="mobile-nav-link">What We Do</a></li>
+        <li><a href="#why-we-exist" class="mobile-nav-link">Why We Exist</a></li>
         <li><a href="#founder" class="mobile-nav-link">About The Founder</a></li>
         <li><a href="#contact" class="mobile-nav-link">Contact Us</a></li>
       </ul>
@@ -138,7 +138,7 @@
               </svg>
             </a>
 
-            <a href="#about" class="btn btn-hero-outline btn-lg">
+            <a href="#what-we-do" class="btn btn-hero-outline btn-lg">
               <span>What We Do</span>
               <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -151,11 +151,12 @@
     </section>
 
     <!-- =========================================================================
-         ABOUT US SECTION & 3 PILLARS
+         WHAT WE DO SECTION & 3 PILLARS
          ========================================================================= -->
-    <section id="about" class="section about-section" aria-labelledby="about-heading">
+    <section id="what-we-do" class="section what-we-do-section" aria-labelledby="what-we-do-heading">
+      <span id="about" class="scroll-anchor-alias" aria-hidden="true"></span>
       <div class="container">
-        <!-- Section Header with subtle branded decorative rays matching reference design -->
+        <!-- Section Header with subtle branded decorative rays -->
         <div class="section-header section-header-with-rays">
           <div class="decorative-rays rays-left" aria-hidden="true">
             <span class="ray ray-purple"></span>
@@ -165,13 +166,20 @@
           <div class="header-center-text">
             <div class="pill-badge pill-badge-purple">
               <span class="pill-dot"></span>
-              <span>About Us</span>
+              <span>What We Do</span>
             </div>
-            <h2 id="about-heading" class="section-title">
-              Fostering Reconciliation, Belonging &amp; Inclusion
+            <h2 id="what-we-do-heading" class="section-title">
+              Breaking down attitudinal barriers.
             </h2>
-            <p class="section-subtitle">
-              Addressing the root causes of misunderstanding across all environments where children grow.
+            <div class="what-we-do-tagline">
+              <span class="tagline-word word-purple">Awareness</span>
+              <span class="tagline-dot" aria-hidden="true">•</span>
+              <span class="tagline-word word-pink">Understanding</span>
+              <span class="tagline-dot" aria-hidden="true">•</span>
+              <span class="tagline-word word-teal">Allyship</span>
+            </div>
+            <p class="section-subtitle what-we-do-lead">
+              Recognizing the barriers we create for others is the first step to changing them.
             </p>
           </div>
           <div class="decorative-rays rays-right" aria-hidden="true">
@@ -181,19 +189,9 @@
           </div>
         </div>
 
-        <!-- Primary Mission Box -->
-        <div class="about-mission-box">
-          <p class="about-mission-text-1">
-            <strong>NeuroKids Allies</strong> creates empathy-centered resources that equip children, individuals, faith leaders, and communities to better understand, accept, and support their neurodivergent loved ones.
-          </p>
-          <p class="about-mission-text-2">
-            Our work addresses neuro-bias, isolation, and community segregation, thereby reducing fractured relationships between neurotypes and fostering reconciliation, belonging, and inclusion across the environments that impact a neurodivergent child’s development.
-          </p>
-        </div>
-
-        <!-- Three Core Pillar Cards (Restyled matching reference 3-card layout: rounded photo top, floating tinted icon badge, clean card body, Learn More link) -->
+        <!-- Three Core Pillar Cards -->
         <div class="pillars-grid">
-          <!-- Pillar 1: Peers -->
+          <!-- Pillar 1: Peer Groups & Friendships -->
           <article class="pillar-card pillar-card-purple">
             <div class="pillar-img-box">
               <img 
@@ -217,13 +215,22 @@
               </div>
 
               <span class="pillar-tag tag-purple">Peers</span>
-              <h3 class="pillar-title">Inclusion in Friendships</h3>
+              <h3 class="pillar-title">Peer Groups &amp; Friendships</h3>
               <p class="pillar-desc">
-                Exclusion, teasing and misunderstandings can make friendships and play difficult for neurodivergent children.
+                Neurodivergent children often experience bullying, teasing and exclusion from peers who misunderstand their differences. Over time, these experiences can lead to social withdrawal and isolation, limiting opportunities to enjoy everyday childhood experiences such as playdates, birthday parties, recess and lunch breaks.
               </p>
+
+              <!-- Resource Highlight Box -->
+              <div class="pillar-resource-callout resource-callout-purple">
+                <span class="resource-callout-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                  <span>Resources</span>
+                </span>
+                <span class="resource-callout-text">Helping children understand, accept and include their neurodivergent peers.</span>
+              </div>
               
-              <a href="#resources" class="pillar-learn-more link-purple">
-                <span>Learn More</span>
+              <a href="#contact" class="pillar-learn-more link-purple">
+                <span>Explore Resources</span>
                 <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                   <polyline points="12 5 19 12 12 19"></polyline>
@@ -232,7 +239,7 @@
             </div>
           </article>
 
-          <!-- Pillar 2: Family & Friends -->
+          <!-- Pillar 2: Support at Home and in the Community -->
           <article class="pillar-card pillar-card-pink">
             <div class="pillar-img-box">
               <img 
@@ -255,11 +262,20 @@
               <span class="pillar-tag tag-pink">Family &amp; Friends</span>
               <h3 class="pillar-title">Support at Home and in the Community</h3>
               <p class="pillar-desc">
-                Expectations about behaviour, communication and parenting can create judgment and make family gatherings uncomfortable.
+                Being misunderstood by loved ones can be especially difficult for neurodivergent children and their families. Judgments about behaviour, communication and parenting can make family gatherings uncomfortable. Over time, invitations may become less frequent, or families may begin declining them to avoid criticism.
               </p>
 
-              <a href="#resources" class="pillar-learn-more link-pink">
-                <span>Learn More</span>
+              <!-- Resource Highlight Box -->
+              <div class="pillar-resource-callout resource-callout-pink">
+                <span class="resource-callout-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                  <span>Resources</span>
+                </span>
+                <span class="resource-callout-text">Helping relatives, friends and loved ones better understand and support neurodivergent children and their families.</span>
+              </div>
+
+              <a href="#contact" class="pillar-learn-more link-pink">
+                <span>Explore Resources</span>
                 <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                   <polyline points="12 5 19 12 12 19"></polyline>
@@ -268,7 +284,7 @@
             </div>
           </article>
 
-          <!-- Pillar 3: Communities -->
+          <!-- Pillar 3: Welcoming Spaces for Every Child -->
           <article class="pillar-card pillar-card-teal">
             <div class="pillar-img-box">
               <img 
@@ -292,149 +308,25 @@
               <span class="pillar-tag tag-teal">Communities</span>
               <h3 class="pillar-title">Welcoming Spaces for Every Child</h3>
               <p class="pillar-desc">
-                Faith groups, community spaces and social gatherings can unintentionally exclude children through rigid expectations and misunderstandings.
+                Faith groups, recreational facilities and community gatherings can unintentionally exclude neurodivergent children through rigid expectations, misconceptions and judgmental responses from staff, organizers and other participants.
               </p>
 
-              <a href="#resources" class="pillar-learn-more link-teal">
-                <span>Learn More</span>
+              <!-- Resource Highlight Box -->
+              <div class="pillar-resource-callout resource-callout-teal">
+                <span class="resource-callout-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                  <span>Resources</span>
+                </span>
+                <span class="resource-callout-text">Helping community members recognize exclusionary attitudes, challenge misconceptions and become everyday allies.</span>
+              </div>
+
+              <a href="#contact" class="pillar-learn-more link-teal">
+                <span>Explore Resources</span>
                 <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                   <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
               </a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================================================================
-         RESOURCES SECTION — WITH CONFIGURABLE DOWNLOAD BUTTONS
-         ========================================================================= -->
-    <section id="resources" class="section resources-section" aria-labelledby="resources-heading">
-      <div class="container">
-        <div class="section-header">
-          <div class="pill-badge">
-            <span class="pill-dot"></span>
-            <span>Resources</span>
-          </div>
-          <h2 id="resources-heading" class="section-title">
-            Allyship Resources for People &amp; Communities
-          </h2>
-          <p class="section-subtitle">
-            Neuro-affirming tools designed to help children, families, and organizations unlearn assumptions and cultivate genuine empathy.
-          </p>
-        </div>
-
-        <!-- 3 Resource Cards with Configurable Download Buttons -->
-        <div class="resources-grid">
-          <!-- Resource 1: For Children -->
-          <article class="resource-card resource-card-purple">
-            <div class="resource-card-top">
-              <div class="resource-icon-badge badge-purple">
-                <svg class="resource-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-                  <line x1="9" y1="9" x2="9.01" y2="9"></line>
-                  <line x1="15" y1="9" x2="15.01" y2="9"></line>
-                </svg>
-              </div>
-              <p class="resource-category tag-purple">Play &amp; Storytelling</p>
-              <h3 class="resource-title">For Children</h3>
-              <p class="resource-description">
-                Engage with social cue games, storytelling, and guided conversations to build empathy in children towards their neurodivergent peers.
-              </p>
-            </div>
-
-            <div class="resource-card-footer">
-              <button 
-                id="btn-download-children" 
-                class="btn btn-primary resource-btn" 
-                data-resource-index="0" 
-                data-resource-title="For Children Guide"
-                aria-label="Download For Children allyship guide"
-              >
-                <span>Download Guide</span>
-                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                  <polyline points="7 10 12 15 17 10"></polyline>
-                  <line x1="12" y1="15" x2="12" y2="3"></line>
-                </svg>
-              </button>
-              <span class="resource-format-hint">Games • Stories • Guided Prompts</span>
-            </div>
-          </article>
-
-          <!-- Resource 2: For Individuals & Social Gatherings -->
-          <article class="resource-card resource-card-pink">
-            <div class="resource-card-top">
-              <div class="resource-icon-badge badge-pink">
-                <svg class="resource-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
-              </div>
-              <p class="resource-category tag-pink">Homes &amp; Families</p>
-              <h3 class="resource-title">For Individuals &amp; Social Gatherings</h3>
-              <p class="resource-description">
-                Resources that affirm neurodivergent children and families across homes and social gatherings.
-              </p>
-            </div>
-
-            <div class="resource-card-footer">
-              <button 
-                id="btn-download-individuals" 
-                class="btn btn-primary resource-btn" 
-                data-resource-index="1" 
-                data-resource-title="For Individuals &amp; Social Gatherings Guide"
-                aria-label="Download For Individuals & Social Gatherings guide"
-              >
-                <span>Download Guide</span>
-                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                  <polyline points="7 10 12 15 17 10"></polyline>
-                  <line x1="12" y1="15" x2="12" y2="3"></line>
-                </svg>
-              </button>
-              <span class="resource-format-hint">Affirming Language • Gathering Tips</span>
-            </div>
-          </article>
-
-          <!-- Resource 3: For Communities & Places of Faith -->
-          <article class="resource-card resource-card-teal">
-            <div class="resource-card-top">
-              <div class="resource-icon-badge badge-teal">
-                <svg class="resource-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M3 21h18"></path>
-                  <path d="M5 21V7l7-4 7 4v14"></path>
-                  <path d="M10 9a2 2 0 0 1 4 0v12h-4z"></path>
-                </svg>
-              </div>
-              <p class="resource-category tag-teal">Faith &amp; Leadership</p>
-              <h3 class="resource-title">For Communities &amp; Places of Faith</h3>
-              <p class="resource-description">
-                Specialized resource materials for community and faith groups looking to foster neuro-affirming spaces.
-              </p>
-            </div>
-
-            <div class="resource-card-footer">
-              <button 
-                id="btn-download-communities" 
-                class="btn btn-primary resource-btn" 
-                data-resource-index="2" 
-                data-resource-title="For Communities &amp; Places of Faith Guide"
-                aria-label="Download For Communities & Places of Faith guide"
-              >
-                <span>Download Guide</span>
-                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                  <polyline points="7 10 12 15 17 10"></polyline>
-                  <line x1="12" y1="15" x2="12" y2="3"></line>
-                </svg>
-              </button>
-              <span class="resource-format-hint">Leadership Handbook • Inclusion Policies</span>
             </div>
           </article>
         </div>
@@ -470,16 +362,19 @@
             
             <div class="why-text-body">
               <p class="why-p">
-                Neurodivergent children and their families experience attitudinal barriers through the judgments, assumptions and reactions of others to their children's behaviour during everyday interactions.
+                For many neurodivergent children and their families, the greatest challenges are not always the differences themselves, but how others respond to them.
               </p>
               <p class="why-p">
-                We stare, judge and sometimes discriminate without realizing that a child's behaviour may reflect differences in how their brain works, rather than bad behaviour or poor parenting.
+                A child's behaviour may be viewed as disobedience, poor manners or a reflection of inadequate parenting, rather than an expression of how they experience, process or respond to the world.
               </p>
               <p class="why-p">
-                These attitudes and responses can leave children and their families feeling unwelcome or excluded from family gatherings, social activities and community spaces. Over time, families may withdraw from these experiences, missing opportunities to connect, belong and thrive.
+                These assumptions can shape everyday interactions, making spaces that should offer connection and belonging feel unwelcoming. Over time, the cumulative impact can affect children's confidence, relationships and opportunities to participate in community life.
               </p>
               <p class="why-p">
-                NeuroKids Allies was created to challenge these attitudes and help remove the barriers they create. We believe that when people understand more, they judge less, making belonging and participation possible for more neurodivergent children and their families.
+                Neuro Kids Allies was created from the belief that inclusion requires more than simply opening doors. It requires a willingness to question our assumptions, rethink our responses and make room for different ways of being.
+              </p>
+              <p class="why-p">
+                When we choose to understand rather than judge, we help create a world where more children can belong.
               </p>
             </div>
           </div>
@@ -531,16 +426,19 @@
 
             <div class="founder-bio">
               <p class="founder-bio-p">
-                <strong>Omotayo</strong> is the founder of NeuroKids Allies (NKA), an initiative dedicated to breaking down attitudinal barriers to inclusion for neurodivergent children and their families.
+                <strong>Omotayo</strong> is the founder of Neuro Kids Allies (NKA), an initiative inspired by her lived experiences as a neurodivergent adult and parent of a neurodivergent child.
               </p>
               <p class="founder-bio-p">
-                As a neurodivergent adult herself and parent of a neurodivergent child, she has seen firsthand how the attitudes and judgments of others can become barriers to everyday social experiences, leaving neurodivergent children and their families feeling unwelcome or excluded from family gatherings, social activities, and community spaces.
+                Through her personal journey, she has witnessed how quickly children's differences can be misunderstood and how deeply the reactions of others can affect a family's sense of belonging.
               </p>
               <p class="founder-bio-p">
-                These experiences inspired her to establish NeuroKids Allies, with a mission to challenge these attitudes and help create communities where neurodivergent children and their families feel welcomed, understood, and included.
+                These experiences shaped her belief that meaningful inclusion begins with a shift in how we see, understand and respond to people whose experiences differ from our own.
               </p>
               <p class="founder-bio-p">
-                Through awareness, practical resources, and community conversations, Omotayo hopes to inspire everyday allyship, foster greater understanding, and build stronger connections between neurodivergent families and their communities.
+                She founded Neuro Kids Allies to turn that belief into action, creating opportunities for learning, reflection and conversations that encourage people to become more thoughtful and supportive allies.
+              </p>
+              <p class="founder-bio-p">
+                Through NKA, Omotayo hopes to inspire a culture of empathy, acceptance and everyday allyship, where neurodivergent children are valued for who they are and families can participate in community life with dignity and confidence.
               </p>
             </div>
 
@@ -579,6 +477,7 @@
          CONTACT US & SUBSCRIBE FORM SECTION
          ========================================================================= -->
     <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
+      <span id="resources" class="scroll-anchor-alias" aria-hidden="true"></span>
       <div class="container">
         <div class="contact-card-box">
           <!-- Left: Contact Details & Nonprofit Info -->
@@ -704,8 +603,8 @@
           <!-- Quick Nav -->
           <div class="footer-links-col">
             <p class="footer-col-title">Navigation</p>
-            <a href="#about" class="footer-link">About Us</a>
-            <a href="#resources" class="footer-link">Allyship Resources</a>
+            <a href="#what-we-do" class="footer-link">What We Do</a>
+            <a href="#why-we-exist" class="footer-link">Why We Exist</a>
             <a href="#founder" class="footer-link">About The Founder</a>
             <a href="#contact" class="footer-link">Contact Us</a>
           </div>
@@ -754,6 +653,6 @@
   </div>
 
   <!-- Main JavaScript File -->
-  <script src="app.js"></script>
+  <script src="app.js?v=1.2"></script>
 </body>
 </html>
