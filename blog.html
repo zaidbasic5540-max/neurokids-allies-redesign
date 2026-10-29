@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Real Experiences &amp; Stories | NeuroKids Allies</title>
+  <meta name="description" content="A compilation of real experiences from neurodivergent families about how their child has been stigmatized and what we can do to create more welcoming spaces.">
+  <meta name="theme-color" content="#765DEF">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Blog — Real Experiences &amp; Stories | NeuroKids Allies">
+  <meta property="og:description" content="Real experiences from neurodivergent families about how their child has been stigmatized.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Images/only logo no text.png">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Nunito -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css?v=3.5">
+</head>
+<body class="blog-page">
+
+  <!-- =========================================================================
+       STICKY HEADER & NAVIGATION
+       ========================================================================= -->
+  <header class="header" role="banner">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo-link" aria-label="NeuroKids Allies Homepage">
+        <img src="Images/only logo no text.png" alt="NeuroKids Allies emblem" class="brand-logo-icon" width="70" height="52">
+        <div class="brand-text-block">
+          <span class="brand-name">NeuroKids Allies</span>
+          <span class="brand-divider-line" aria-hidden="true"></span>
+          <span class="brand-tagline">Choosing To Understand</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#what-we-do" class="nav-link">What we do</a>
+        <a href="index.html#resources" class="nav-link">Resources</a>
+        <a href="blog.html" class="nav-link active" aria-current="page">Blog</a>
+        <a href="index.html#get-involved" class="nav-link">Get involved</a>
+      </nav>
+
+      <!-- Header Action -->
+      <div class="nav-actions">
+        <a href="https://preview.mailerlite.io/forms/2009995/176619972987978844/share" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm nav-cta-btn">
+          <span>JOIN THE COMMUNITY</span>
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Toggle Button -->
+        <button id="mobile-toggle" class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <svg class="hamburger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Slide-Down Drawer -->
+    <div id="mobile-drawer" class="mobile-drawer" aria-label="Mobile Navigation">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html#about" class="mobile-nav-link">About</a></li>
+        <li><a href="index.html#what-we-do" class="mobile-nav-link">What we do</a></li>
+        <li><a href="index.html#resources" class="mobile-nav-link">Resources</a></li>
+        <li><a href="blog.html" class="mobile-nav-link active">Blog</a></li>
+        <li><a href="index.html#get-involved" class="mobile-nav-link">Get involved</a></li>
+      </ul>
+      <div class="mobile-cta-wrapper">
+        <a href="https://preview.mailerlite.io/forms/2009995/176619972987978844/share" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" style="width: 100%;">
+          <span>JOIN THE COMMUNITY</span>
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- =========================================================================
+         BLOG HERO SECTION
+         ========================================================================= -->
+    <section class="blog-hero-section" aria-labelledby="blog-hero-title">
+      <div class="container">
+        <div class="blog-hero-grid">
+          <div class="blog-hero-content">
+            <h1 id="blog-hero-title" class="blog-hero-title">Blog</h1>
+            <p class="blog-hero-subtitle">Real Experiences. Real People.</p>
+            <p class="blog-hero-desc">A compilation of experiences from neurodivergent families about how their child has been stigmatized.</p>
+          </div>
+
+          <!-- Non-image Styled Graphic Placeholder -->
+          <div class="blog-hero-placeholder" role="img" aria-label="Featured Story Placeholder">
+            <div class="placeholder-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 20h9"></path>
+                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+              </svg>
+              <span>Featured Story Visual Slot</span>
+            </div>
+            <p class="placeholder-subtext">Stories &amp; lived experiences from neurodivergent families</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         EXPLORE STORIES BY THEME
+         ========================================================================= -->
+    <section class="blog-themes-section" aria-labelledby="theme-section-title">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="stories-theme-header">
+          <h2 id="theme-section-title" class="stories-theme-title">Explore Stories by Theme</h2>
+          <p class="stories-theme-subtitle">Different settings. Similar challenges. Real stories from neurodivergent families.</p>
+          <div class="theme-divider-line" aria-hidden="true"></div>
+        </div>
+
+        <!-- 3 Horizontal Theme Cards -->
+        <div class="theme-cards-stack">
+          
+          <!-- Card 1: Peers (Purple) -->
+          <article class="theme-story-card theme-card-purple">
+            <div class="theme-card-body">
+              <div class="theme-badge-row">
+                <div class="theme-badge-icon purple" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </div>
+                <span class="theme-tag purple">PEERS</span>
+              </div>
+              <h3 class="theme-card-title">Peer Groups &amp; Friendships</h3>
+              <p class="theme-card-desc">Stories from families about bullying, teasing, exclusion and the impact these experiences have on their child's confidence and sense of belonging.</p>
+              <button type="button" class="btn-theme-action purple btn-read-stories">
+                <span>Read Stories</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+            <!-- Styled visual placeholder (no images used) -->
+            <div class="theme-img-placeholder purple" role="img" aria-label="Peer stories image slot">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+              <span class="placeholder-title">Peer Stories Visual Slot</span>
+              <span class="placeholder-hint">Photo reserved for peer interactions &amp; school experiences</span>
+            </div>
+          </article>
+
+          <!-- Card 2: Family & Friends (Pink) -->
+          <article class="theme-story-card theme-card-pink">
+            <div class="theme-card-body">
+              <div class="theme-badge-row">
+                <div class="theme-badge-icon pink" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                  </svg>
+                </div>
+                <span class="theme-tag pink">FAMILY &amp; FRIENDS</span>
+              </div>
+              <h3 class="theme-card-title">Support at Home and in the Community</h3>
+              <p class="theme-card-desc">Stories from families about misunderstandings, judgments and the impact these experiences have on family gatherings, relationships and community connections.</p>
+              <button type="button" class="btn-theme-action pink btn-read-stories">
+                <span>Read Stories</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+            <!-- Styled visual placeholder (no images used) -->
+            <div class="theme-img-placeholder pink" role="img" aria-label="Family stories image slot">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+              <span class="placeholder-title">Family Stories Visual Slot</span>
+              <span class="placeholder-hint">Photo reserved for family support &amp; home connections</span>
+            </div>
+          </article>
+
+          <!-- Card 3: Communities (Teal) -->
+          <article class="theme-story-card theme-card-teal">
+            <div class="theme-card-body">
+              <div class="theme-badge-row">
+                <div class="theme-badge-icon teal" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                  </svg>
+                </div>
+                <span class="theme-tag teal">COMMUNITIES</span>
+              </div>
+              <h3 class="theme-card-title">Welcoming Spaces for Every Child</h3>
+              <p class="theme-card-desc">Stories from families about experiences in faith groups, recreational spaces, community programs and other public spaces, and how misunderstandings and attitudes can make it difficult for their child to feel included.</p>
+              <button type="button" class="btn-theme-action teal btn-read-stories">
+                <span>Read Stories</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+            <!-- Styled visual placeholder (no images used) -->
+            <div class="theme-img-placeholder teal" role="img" aria-label="Community stories image slot">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+              <span class="placeholder-title">Community Stories Visual Slot</span>
+              <span class="placeholder-hint">Photo reserved for community gatherings &amp; faith spaces</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER SECTION
+       ========================================================================= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <!-- Brand Summary -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo-link footer-logo-link" aria-label="NeuroKids Allies Homepage">
+            <img src="Images/only logo no text.png" alt="NeuroKids Allies logo" class="brand-logo-icon" width="60" height="44">
+            <div class="brand-text-block">
+              <span class="brand-name">NeuroKids Allies</span>
+              <span class="brand-divider-line" aria-hidden="true"></span>
+              <span class="brand-tagline">Choosing To Understand</span>
+            </div>
+          </a>
+          <p class="footer-mission">
+            Empowering communities, educators, families and peers to recognize everyday attitudinal barriers and build authentically neuro-inclusive social spaces.
+          </p>
+        </div>
+
+        <div class="footer-nav-groups">
+          <!-- Quick Nav -->
+          <div class="footer-links-col">
+            <p class="footer-col-title">Navigation</p>
+            <a href="index.html#about" class="footer-link">About</a>
+            <a href="index.html#what-we-do" class="footer-link">What we do</a>
+            <a href="index.html#resources" class="footer-link">Resources</a>
+            <a href="blog.html" class="footer-link">Blog</a>
+            <a href="index.html#get-involved" class="footer-link">Get involved</a>
+          </div>
+
+          <!-- Community -->
+          <div class="footer-links-col">
+            <p class="footer-col-title">Connect</p>
+            <a href="https://www.instagram.com/neurokidsallies?igsh=NGVwZnY3bG5yYnE=" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram</a>
+            <a href="mailto:info@neurokidsallies.com" class="footer-link">info@neurokidsallies.com</a>
+            <a href="https://preview.mailerlite.io/forms/2009995/176619972987978844/share" target="_blank" rel="noopener noreferrer" class="footer-link">Newsletter Sign-up</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Real Legal Footer Content from Live Site + Required Credit -->
+      <div class="footer-bottom">
+        <div class="footer-legal-links">
+          <span>&copy; NeuroKids Allies Inc. All rights reserved.</span>
+          <button class="footer-legal-btn" data-policy="terms">Terms of Service</button>
+          <button class="footer-legal-btn" data-policy="privacy">Privacy Policy</button>
+          <button class="footer-legal-btn" data-policy="security">Security Statement</button>
+        </div>
+        <div class="footer-credit">
+          Website designed by Zaid
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       ACCESSIBLE POLICY MODAL
+       ========================================================================= -->
+  <div id="policy-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <button id="modal-close-btn" class="modal-close-btn" aria-label="Close dialog">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <h3 id="modal-title" class="modal-title">Policy Title</h3>
+      <div id="modal-body" class="modal-body">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="app.js?v=2.2"></script>
+</body>
+</html>

@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactMessageForm();
   initPolicyModals();
   initPillarAlignment();
+  initBlogInteractions();
 });
 
 /**
@@ -214,6 +215,11 @@ function initNavigation() {
 
   // Active section indicator on scroll
   function highlightActiveNav() {
+    // If on blog page, keep the Blog nav link active and do not override
+    if (document.body.classList.contains('blog-page') || window.location.pathname.endsWith('blog.html')) {
+      return;
+    }
+
     const scrollY = window.pageYOffset;
     const isAtBottom = (window.innerHeight + scrollY) >= (document.documentElement.scrollHeight - 60);
 
@@ -576,4 +582,21 @@ function initPillarAlignment() {
   }
   window.addEventListener('load', alignCards);
 }
+
+/**
+ * ------------------------------------------------------------------------------
+ * Blog Page Interactivity
+ * ------------------------------------------------------------------------------
+ */
+function initBlogInteractions() {
+  const readButtons = document.querySelectorAll('.btn-read-stories');
+  readButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const themeTitle = btn.closest('.theme-story-card')?.querySelector('.theme-card-title')?.textContent.trim() || 'this theme';
+      showToast(`Stories for "${themeTitle}" are currently being compiled and will be published soon! Have an experience to share? Please reach out.`);
+    });
+  });
+}
+
 
