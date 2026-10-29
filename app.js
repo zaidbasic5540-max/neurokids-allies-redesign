@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPolicyModals();
   initPillarAlignment();
   initBlogInteractions();
+  initResourceInteractions();
 });
 
 /**
@@ -215,8 +216,11 @@ function initNavigation() {
 
   // Active section indicator on scroll
   function highlightActiveNav() {
-    // If on blog page, keep the Blog nav link active and do not override
-    if (document.body.classList.contains('blog-page') || window.location.pathname.endsWith('blog.html')) {
+    // If on blog page or resources page, keep the active nav link and do not override
+    if (document.body.classList.contains('blog-page') || 
+        document.body.classList.contains('resources-page') || 
+        window.location.pathname.endsWith('blog.html') || 
+        window.location.pathname.endsWith('resources.html')) {
       return;
     }
 
@@ -598,5 +602,22 @@ function initBlogInteractions() {
     });
   });
 }
+
+/**
+ * ------------------------------------------------------------------------------
+ * Resources Page Interactivity
+ * ------------------------------------------------------------------------------
+ */
+function initResourceInteractions() {
+  const exploreButtons = document.querySelectorAll('.btn-explore-resource');
+  exploreButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const resourceTitle = btn.closest('.resource-item-card')?.querySelector('.resource-card-title')?.textContent.trim() || 'this resource';
+      showToast(`"${resourceTitle}" is currently in preparation and will be available soon! Join our community to receive it upon release.`);
+    });
+  });
+}
+
 
 
