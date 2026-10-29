@@ -68,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initResourceButtons();
   initSubscribeForm();
+  initContactMessageForm();
   initPolicyModals();
   initPillarAlignment();
 });
@@ -155,7 +156,11 @@ function initNavigation() {
       let targetSection = document.getElementById(targetId);
       if (targetId === 'about') {
         targetSection = document.getElementById('why-we-exist') || targetSection;
-      } else if (targetId === 'be-an-ally' || targetId === 'get-involved' || targetId === 'resources') {
+      } else if (targetId === 'resources') {
+        targetSection = document.getElementById('resources');
+      } else if (targetId === 'get-involved') {
+        targetSection = document.getElementById('get-involved') || document.getElementById('contact');
+      } else if (targetId === 'be-an-ally') {
         targetSection = document.getElementById('contact') || targetSection;
       }
 
@@ -214,16 +219,20 @@ function initNavigation() {
 
     // Section definitions with their corresponding primary nav href
     const sectionTargets = [
-      { id: 'what-we-do', href: '#what-we-do' },
       { id: 'why-we-exist', href: '#about' },
+      { id: 'what-we-do', href: '#what-we-do' },
+      { id: 'resources', href: '#resources' },
+      { id: 'our-vision', href: '#about' },
+      { id: 'our-mission', href: '#about' },
       { id: 'founder', href: '#about' },
-      { id: 'contact', href: '#get-involved' }
+      { id: 'contact', href: '#contact' },
+      { id: 'get-involved', href: '#get-involved' }
     ];
 
     let activeHref = null;
 
     if (isAtBottom) {
-      activeHref = '#get-involved';
+      activeHref = '#contact';
     } else {
       for (const target of sectionTargets) {
         const el = document.getElementById(target.id);
@@ -363,6 +372,23 @@ function initSubscribeForm() {
 
 /**
  * ------------------------------------------------------------------------------
+ * Contact Us Message Form Handler
+ * ------------------------------------------------------------------------------
+ */
+function initContactMessageForm() {
+  const form = document.getElementById('contact-message-form');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const firstName = document.getElementById('contact-first-name')?.value.trim() || 'Friend';
+    showToast(`Thank you, ${firstName}! Your message has been received. We'll get back to you soon.`);
+    form.reset();
+  });
+}
+
+/**
+ * ------------------------------------------------------------------------------
  * Accessible Policy Modals (Terms, Privacy, Security Statement)
  * ------------------------------------------------------------------------------
  */
@@ -481,37 +507,57 @@ function showToast(message) {
 
 /**
  * ------------------------------------------------------------------------------
- * Dynamic Pillar Card Elements Alignment
- * Ensures card titles, descriptions, and resource callout boxes start and end
- * at the exact same vertical heights across all 3 cards on desktop / tablet.
+ * Dynamic Pillar Card Elements Alignment (Row-by-Row)
+ * Ensures:
+ * 1. Titles in each row align at the exact same height.
+ * 2. Descriptions in each row align at the exact same height so that
+ *    the Resource Callout boxes in each row start at the EXACT SAME VERTICAL HEIGHT.
+ * 3. Resource Callouts in each row align in height so that
+ *    the action buttons sit on the exact same bottom baseline.
  * ------------------------------------------------------------------------------
  */
 function initPillarAlignment() {
   const alignCards = () => {
+    const cards = document.querySelectorAll('.pillar-card');
+    if (!cards.length) return;
+
     const titles = document.querySelectorAll('.pillar-title');
     const descs = document.querySelectorAll('.pillar-desc');
-    const callouts = document.querySelectorAll('.pillar-resource-callout');
+    const resources = document.querySelectorAll('.pillar-resource-callout');
 
-    if (!titles.length || !descs.length || !callouts.length) return;
-
-    // Reset inline heights first so natural content height can be measured accurately
+    // Reset inline min-heights first so natural content height can be measured accurately
     titles.forEach(el => el.style.minHeight = '');
     descs.forEach(el => el.style.minHeight = '');
-    callouts.forEach(el => el.style.minHeight = '');
+    resources.forEach(el => el.style.minHeight = '');
 
-    // Only equalize on multi-column viewports (>= 768px)
+    // Multi-column grid threshold (768px matches .pillars-grid media query)
     if (window.innerWidth >= 768) {
-      let maxTitleH = 0;
-      let maxDescH = 0;
-      let maxCalloutH = 0;
+      // Group cards into rows of 2 (Row 1: cards 0 & 1; Row 2: cards 2 & 3)
+      for (let i = 0; i < cards.length; i += 2) {
+        const rowCards = [cards[i], cards[i + 1]].filter(Boolean);
+        if (rowCards.length < 2) continue;
 
-      titles.forEach(el => { maxTitleH = Math.max(maxTitleH, el.offsetHeight); });
-      descs.forEach(el => { maxDescH = Math.max(maxDescH, el.offsetHeight); });
-      callouts.forEach(el => { maxCalloutH = Math.max(maxCalloutH, el.offsetHeight); });
+        // 1. Equalize titles in this row
+        const rowTitles = rowCards.map(c => c.querySelector('.pillar-title')).filter(Boolean);
+        if (rowTitles.length) {
+          const maxTitleH = Math.max(...rowTitles.map(el => el.offsetHeight));
+          rowTitles.forEach(el => el.style.minHeight = `${maxTitleH}px`);
+        }
 
-      titles.forEach(el => { el.style.minHeight = `${maxTitleH}px`; });
-      descs.forEach(el => { el.style.minHeight = `${maxDescH}px`; });
-      callouts.forEach(el => { el.style.minHeight = `${maxCalloutH}px`; });
+        // 2. Equalize descriptions in this row -> guarantees resource boxes start at identical height
+        const rowDescs = rowCards.map(c => c.querySelector('.pillar-desc')).filter(Boolean);
+        if (rowDescs.length) {
+          const maxDescH = Math.max(...rowDescs.map(el => el.offsetHeight));
+          rowDescs.forEach(el => el.style.minHeight = `${maxDescH}px`);
+        }
+
+        // 3. Equalize resource callout boxes in this row -> guarantees buttons align on same baseline
+        const rowResources = rowCards.map(c => c.querySelector('.pillar-resource-callout')).filter(Boolean);
+        if (rowResources.length) {
+          const maxResH = Math.max(...rowResources.map(el => el.offsetHeight));
+          rowResources.forEach(el => el.style.minHeight = `${maxResH}px`);
+        }
+      }
     }
   };
 
@@ -521,7 +567,7 @@ function initPillarAlignment() {
   let resizeTimer;
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(alignCards, 50);
+    resizeTimer = setTimeout(alignCards, 40);
   });
 
   // Re-run after fonts or images finish loading

@@ -25,7 +25,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Nunito:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=2.1">
+  <link rel="stylesheet" href="styles.css?v=3.4">
 </head>
 <body>
   <!-- Accessible Skip Navigation -->
@@ -47,23 +47,15 @@
 
       <!-- Desktop Navigation Menu -->
       <nav class="nav-menu" aria-label="Main Navigation">
-        <a href="#about" class="nav-link">ABOUT</a>
-        <a href="#what-we-do" class="nav-link">WHAT WE DO</a>
-        <a href="#be-an-ally" class="nav-link">BE AN ALLY</a>
-        <a href="#get-involved" class="nav-link">GET INVOLVED</a>
-        <a href="#resources" class="nav-link">RESOURCES</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#what-we-do" class="nav-link">What we do</a>
+        <a href="#resources" class="nav-link">Resources</a>
+        <a href="#get-involved" class="nav-link">Get involved</a>
+        <a href="#contact" class="nav-link">Contact us</a>
       </nav>
 
       <!-- Header Action -->
       <div class="nav-actions">
-        <!-- Search Icon Button matching reference visual hierarchy -->
-        <button id="header-search-btn" class="header-search-btn" aria-label="Search" title="Search resources">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
-        </button>
-
         <a href="https://preview.mailerlite.io/forms/2009995/176619972987978844/share" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm nav-cta-btn">
           <span>JOIN THE COMMUNITY</span>
           <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -86,11 +78,11 @@
     <!-- Mobile Slide-Down Drawer -->
     <div id="mobile-drawer" class="mobile-drawer" aria-label="Mobile Navigation">
       <ul class="mobile-nav-list">
-        <li><a href="#about" class="mobile-nav-link">ABOUT</a></li>
-        <li><a href="#what-we-do" class="mobile-nav-link">WHAT WE DO</a></li>
-        <li><a href="#be-an-ally" class="mobile-nav-link">BE AN ALLY</a></li>
-        <li><a href="#get-involved" class="mobile-nav-link">GET INVOLVED</a></li>
-        <li><a href="#resources" class="mobile-nav-link">RESOURCES</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#what-we-do" class="mobile-nav-link">What we do</a></li>
+        <li><a href="#resources" class="mobile-nav-link">Resources</a></li>
+        <li><a href="#get-involved" class="mobile-nav-link">Get involved</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact us</a></li>
       </ul>
       <div class="mobile-cta-wrapper">
         <a href="https://preview.mailerlite.io/forms/2009995/176619972987978844/share" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" style="width: 100%;">
@@ -123,11 +115,11 @@
 
           <!-- Bold headline with one word given brand-gradient treatment -->
           <h1 id="hero-heading" class="hero-title">
-            A world where our attitudes create belonging for <span class="brand-gradient-word">neurodivergent</span> children.
+            A world where our reaction tells <span class="brand-gradient-word">neurodivergent</span> children they belong.
           </h1>
 
           <p class="hero-lead">
-            We help individuals and organizations recognize how everyday attitudes, assumptions and responses can unintentionally exclude neurodivergent children, and provide practical resources to help change that.
+            We help individuals and organizations recognize how their attitudes, assumptions and everyday reactions can leave neurodivergent children feeling unwelcome or excluded. Through practical resources, community conversations and shared experiences, we work to change these barriers so every child can connect and belong.
           </p>
 
           <!-- Two Buttons: One Filled (Brand Purple), One Outlined (White/Semi-transparent) -->
@@ -153,6 +145,39 @@
     </section>
 
     <!-- =========================================================================
+         OUR WHY SECTION
+         ========================================================================= -->
+    <section id="why-we-exist" class="section why-section" aria-labelledby="why-heading">
+      <span id="about" class="scroll-anchor-alias" aria-hidden="true"></span>
+      <div class="container">
+        <div class="why-card">
+          <!-- Narrative Content -->
+          <div class="why-content-col">
+            <h2 id="why-heading" class="why-title">Our Why</h2>
+            
+            <div class="why-text-body">
+              <p class="why-p">
+                For many neurodivergent children and their families, the greatest challenges are not always the differences themselves, but how others respond to them.
+              </p>
+              <p class="why-p">
+                A child's behaviour may be viewed as disobedience, poor manners or a reflection of inadequate parenting, rather than an expression of how they experience, process or respond to the world.
+              </p>
+              <p class="why-p">
+                These assumptions can shape everyday interactions, making spaces that should offer connection and belonging feel unwelcoming. Over time, the cumulative impact can affect children's confidence, relationships and opportunities to participate in community life.
+              </p>
+              <p class="why-p">
+                Neuro Kids Allies was created from the belief that inclusion requires more than simply opening doors. It requires a willingness to question our assumptions, rethink our responses and make room for different ways of being.
+              </p>
+              <p class="why-p">
+                When we choose to understand rather than judge, we help create a world where more children can belong.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
          WHAT WE DO SECTION & 3 PILLARS
          ========================================================================= -->
     <section id="what-we-do" class="section what-we-do-section" aria-labelledby="what-we-do-heading">
@@ -172,12 +197,40 @@
             <h2 id="what-we-do-heading" class="section-title">
               Breaking down attitudinal barriers.
             </h2>
-            <div class="what-we-do-tagline">
-              <span class="tagline-word word-purple">Awareness</span>
-              <span class="tagline-dot" aria-hidden="true">•</span>
-              <span class="tagline-word word-pink">Understanding</span>
-              <span class="tagline-dot" aria-hidden="true">•</span>
-              <span class="tagline-word word-teal">Allyship</span>
+            <div class="values-trio" role="list" aria-label="Core Pillars: Awareness, Understanding, Allyship">
+              <!-- Pillar 1: Awareness -->
+              <div class="value-item value-purple" role="listitem">
+                <div class="value-icon-box" aria-hidden="true">
+                  <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </div>
+                <span class="value-label">AWARENESS</span>
+              </div>
+
+              <!-- Pillar 2: Understanding -->
+              <div class="value-item value-pink" role="listitem">
+                <div class="value-icon-box" aria-hidden="true">
+                  <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                  </svg>
+                </div>
+                <span class="value-label">UNDERSTANDING</span>
+              </div>
+
+              <!-- Pillar 3: Allyship -->
+              <div class="value-item value-teal" role="listitem">
+                <div class="value-icon-box" aria-hidden="true">
+                  <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </div>
+                <span class="value-label">ALLYSHIP</span>
+              </div>
             </div>
             <p class="section-subtitle what-we-do-lead">
               Recognizing the barriers we create for others is the first step to changing them.
@@ -190,38 +243,38 @@
           </div>
         </div>
 
-        <!-- Three Core Pillar Cards -->
-        <div class="pillars-grid">
+        <!-- Four Core Pillar Cards (2x2 Grid) — Direct target for Resources menu link -->
+        <div id="resources" class="pillars-grid">
           <!-- Pillar 1: Peer Groups & Friendships -->
           <article class="pillar-card pillar-card-purple">
             <div class="pillar-img-box">
               <img 
-                src="Images/card-1-photo.jpg" 
+                src="Images/pic pic 1.png" 
                 alt="Diverse group of peers smiling and talking together outdoors" 
                 class="pillar-img" 
-                width="1920" 
-                height="1280"
+                width="500" 
+                height="346"
                 loading="lazy"
               >
             </div>
             <div class="pillar-body">
-              <!-- Floating tinted circular icon badge -->
               <div class="pillar-floating-badge badge-purple" aria-hidden="true">
-                <svg class="pillar-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                   <circle cx="9" cy="7" r="4"></circle>
                   <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                   <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                 </svg>
               </div>
-
               <span class="pillar-tag tag-purple">Peers</span>
               <h3 class="pillar-title">Peer Groups &amp; Friendships</h3>
+
+              <!-- Content first -->
               <p class="pillar-desc">
                 Neurodivergent children often experience bullying, teasing and exclusion from peers who misunderstand their differences. Over time, these experiences can lead to social withdrawal and isolation, limiting opportunities to enjoy everyday childhood experiences such as playdates, birthday parties, recess and lunch breaks.
               </p>
 
-              <!-- Resource Highlight Box -->
+              <!-- Then below in resources -->
               <div class="pillar-resource-callout resource-callout-purple">
                 <span class="resource-callout-badge">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
@@ -229,14 +282,17 @@
                 </span>
                 <span class="resource-callout-text">Helping children understand, accept and include their neurodivergent peers.</span>
               </div>
-              
-              <a href="#contact" class="pillar-learn-more link-purple">
-                <span>Explore Resources</span>
-                <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </a>
+
+              <!-- Button centered at bottom -->
+              <div class="pillar-card-footer">
+                <a href="#contact" class="btn btn-pillar btn-pillar-purple">
+                  <span>Explore Resources</span>
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
             </div>
           </article>
 
@@ -244,29 +300,29 @@
           <article class="pillar-card pillar-card-pink">
             <div class="pillar-img-box">
               <img 
-                src="Images/card-2-photo.jpg" 
-                alt="Mother and daughter sharing a warm, joyful smile together" 
+                src="Images/pic pic 2.png" 
+                alt="Family and loved ones sharing a warm, supportive moment together" 
                 class="pillar-img" 
-                width="1280" 
-                height="853"
+                width="476" 
+                height="320"
                 loading="lazy"
               >
             </div>
             <div class="pillar-body">
-              <!-- Floating tinted circular icon badge -->
               <div class="pillar-floating-badge badge-pink" aria-hidden="true">
-                <svg class="pillar-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                 </svg>
               </div>
-
               <span class="pillar-tag tag-pink">Family &amp; Friends</span>
               <h3 class="pillar-title">Support at Home and in the Community</h3>
+
+              <!-- Content first -->
               <p class="pillar-desc">
                 Being misunderstood by loved ones can be especially difficult for neurodivergent children and their families. Judgments about behaviour, communication and parenting can make family gatherings uncomfortable. Over time, invitations may become less frequent, or families may begin declining them to avoid criticism.
               </p>
 
-              <!-- Resource Highlight Box -->
+              <!-- Then below in resources -->
               <div class="pillar-resource-callout resource-callout-pink">
                 <span class="resource-callout-badge">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
@@ -275,13 +331,16 @@
                 <span class="resource-callout-text">Helping relatives, friends and loved ones better understand and support neurodivergent children and their families.</span>
               </div>
 
-              <a href="#contact" class="pillar-learn-more link-pink">
-                <span>Explore Resources</span>
-                <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </a>
+              <!-- Button centered at bottom -->
+              <div class="pillar-card-footer">
+                <a href="#contact" class="btn btn-pillar btn-pillar-pink">
+                  <span>Explore Resources</span>
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
             </div>
           </article>
 
@@ -298,21 +357,21 @@
               >
             </div>
             <div class="pillar-body">
-              <!-- Floating tinted circular icon badge -->
               <div class="pillar-floating-badge badge-teal" aria-hidden="true">
-                <svg class="pillar-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                   <polyline points="9 22 9 12 15 12 15 22"></polyline>
                 </svg>
               </div>
-
               <span class="pillar-tag tag-teal">Communities</span>
               <h3 class="pillar-title">Welcoming Spaces for Every Child</h3>
+
+              <!-- Content first -->
               <p class="pillar-desc">
                 Faith groups, recreational facilities and community gatherings can unintentionally exclude neurodivergent children through rigid expectations, misconceptions and judgmental responses from staff, organizers and other participants.
               </p>
 
-              <!-- Resource Highlight Box -->
+              <!-- Then below in resources -->
               <div class="pillar-resource-callout resource-callout-teal">
                 <span class="resource-callout-badge">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
@@ -321,13 +380,70 @@
                 <span class="resource-callout-text">Helping community members recognize exclusionary attitudes, challenge misconceptions and become everyday allies.</span>
               </div>
 
-              <a href="#contact" class="pillar-learn-more link-teal">
-                <span>Explore Resources</span>
-                <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
+              <!-- Button centered at bottom -->
+              <div class="pillar-card-footer">
+                <a href="#contact" class="btn btn-pillar btn-pillar-teal">
+                  <span>Explore Resources</span>
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pillar 4: Policy Contributions -->
+          <article class="pillar-card pillar-card-indigo">
+            <div class="pillar-img-box pillar-placeholder-box">
+              <div class="pillar-placeholder-content">
+                <div class="placeholder-subtle-icon" aria-hidden="true">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                    <path d="M2 12h20"></path>
+                  </svg>
+                </div>
+                <span class="placeholder-label">Policy &amp; Research</span>
+              </div>
+            </div>
+            <div class="pillar-body">
+              <div class="pillar-floating-badge badge-indigo" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
                 </svg>
-              </a>
+              </div>
+              <span class="pillar-tag tag-indigo">Policy &amp; Advocacy</span>
+              <h3 class="pillar-title">Policy Contributions</h3>
+
+              <!-- Content first -->
+              <p class="pillar-desc">
+                Through community conversations, coffee chats, surveys and engagement with neurodivergent families, NeuroKids Allies aims to understand everyday attitudinal barriers, identify gaps and develop recommendations that promote meaningful inclusion for neurodivergent children.
+              </p>
+
+              <!-- Then below in resources -->
+              <div class="pillar-resource-callout resource-callout-indigo">
+                <span class="resource-callout-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                  <span>Resources</span>
+                </span>
+                <span class="resource-callout-text">Combining research, lived experiences and community feedback to promote inclusive practices, evidence-based recommendations and policy development.</span>
+              </div>
+
+              <!-- Button centered at bottom -->
+              <div class="pillar-card-footer">
+                <a href="#contact" class="btn btn-pillar btn-pillar-indigo">
+                  <span>Explore Resources</span>
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
             </div>
           </article>
         </div>
@@ -335,48 +451,39 @@
     </section>
 
     <!-- =========================================================================
-         WHY NEUROKIDS ALLIES EXISTS SECTION
+         OUR VISION SECTION
          ========================================================================= -->
-    <section id="why-we-exist" class="section why-section" aria-labelledby="why-heading">
-      <span id="about" class="scroll-anchor-alias" aria-hidden="true"></span>
+    <section id="our-vision" class="section vision-section" aria-labelledby="vision-heading">
+      <span id="vision" class="scroll-anchor-alias" aria-hidden="true"></span>
       <div class="container">
-        <div class="why-card">
-          <!-- Left: Branded "Our Why" Visual Lockup -->
-          <div class="why-visual-col">
-            <div class="why-graphic-wrapper">
-              <img 
-                src="Images/our-why-graphic.svg" 
-                alt="Our Why — NeuroKids Allies" 
-                class="why-graphic-img"
-                width="240" 
-                height="220"
-                loading="lazy"
-              >
+        <div class="statement-card vision-card">
+          <div class="statement-content">
+            <h2 id="vision-heading" class="vision-title">Our Vision</h2>
+            <div class="statement-text-body">
+              <p class="vision-lead">
+                A world where attitudes, assumptions and everyday responses no longer create barriers to belonging for neurodivergent children and their families.
+              </p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <!-- Vertical Divider Line -->
-          <div class="why-divider" aria-hidden="true"></div>
-
-          <!-- Right: Narrative Content -->
-          <div class="why-content-col">
-            <h2 id="why-heading" class="why-title">Why NeuroKids Allies Exists</h2>
-            
-            <div class="why-text-body">
-              <p class="why-p">
-                For many neurodivergent children and their families, the greatest challenges are not always the differences themselves, but how others respond to them.
+    <!-- =========================================================================
+         OUR MISSION SECTION
+         ========================================================================= -->
+    <section id="our-mission" class="section mission-section" aria-labelledby="mission-heading">
+      <span id="mission" class="scroll-anchor-alias" aria-hidden="true"></span>
+      <div class="container">
+        <div class="statement-card mission-card">
+          <div class="statement-content">
+            <h2 id="mission-heading" class="mission-title">Our Mission</h2>
+            <div class="statement-text-body">
+              <p class="mission-lead">
+                To break down attitudinal barriers that exclude neurodivergent children and their families from everyday social experiences.
               </p>
-              <p class="why-p">
-                A child's behaviour may be viewed as disobedience, poor manners or a reflection of inadequate parenting, rather than an expression of how they experience, process or respond to the world.
-              </p>
-              <p class="why-p">
-                These assumptions can shape everyday interactions, making spaces that should offer connection and belonging feel unwelcoming. Over time, the cumulative impact can affect children's confidence, relationships and opportunities to participate in community life.
-              </p>
-              <p class="why-p">
-                Neuro Kids Allies was created from the belief that inclusion requires more than simply opening doors. It requires a willingness to question our assumptions, rethink our responses and make room for different ways of being.
-              </p>
-              <p class="why-p">
-                When we choose to understand rather than judge, we help create a world where more children can belong.
+              <p class="mission-p">
+                Through awareness, practical resources, community conversations and advocacy, NeuroKids Allies helps peers, loved ones, organizations and communities recognize and challenge misconceptions, change how they respond to neurodivergent differences, and create more welcoming and inclusive environments.
               </p>
             </div>
           </div>
@@ -476,109 +583,235 @@
     </section>
 
     <!-- =========================================================================
-         CONTACT US & SUBSCRIBE FORM SECTION
+         CONTACT US & REACH OUT SECTION (Matching Reference Design)
          ========================================================================= -->
     <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
       <span id="be-an-ally" class="scroll-anchor-alias" aria-hidden="true"></span>
-      <span id="get-involved" class="scroll-anchor-alias" aria-hidden="true"></span>
-      <span id="resources" class="scroll-anchor-alias" aria-hidden="true"></span>
-      <div class="container">
-        <div class="contact-card-box">
-          <!-- Left: Contact Details & Nonprofit Info -->
-          <div class="contact-info-side">
-            <div>
-              <div class="pill-badge">
-                <span class="pill-dot"></span>
-                <span>Contact Us</span>
-              </div>
-              <h2 id="contact-heading" class="section-title">
-                Get In Touch With NeuroKids Allies
-              </h2>
-              <p class="section-subtitle" style="font-size: 1rem;">
-                Have questions about our resources, workshops, or faith community allyship initiatives? We would love to hear from you.
-              </p>
-            </div>
+      <div class="container contact-container">
 
-            <div class="contact-items-list">
-              <!-- Location -->
-              <div class="contact-item-row">
-                <div class="contact-icon-bubble">
-                  <svg class="contact-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                    <circle cx="12" cy="10" r="3"></circle>
-                  </svg>
-                </div>
-                <div>
-                  <p class="contact-item-label">Location</p>
-                  <p class="contact-item-val">Ontario, Hamilton (Canada)</p>
-                </div>
-              </div>
+        <!-- 1. Contact Header (Without portrait image or rays icon per request) -->
+        <div class="contact-header">
+          <h2 id="contact-heading" class="contact-main-title">Contact Us</h2>
+          <p class="contact-we-love">We'd love to hear from you.</p>
+          <p class="contact-lead-desc">
+            Whether you have a question, need more information, want to collaborate, or simply want to share your experience, we're here to listen.
+          </p>
+        </div>
 
-              <!-- Email -->
-              <div class="contact-item-row">
-                <div class="contact-icon-bubble">
-                  <svg class="contact-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <!-- 2. Main Two-Column Row (Get in Touch | Send Us a Message) -->
+        <div class="contact-main-grid">
+
+          <!-- Left Card: Get in Touch -->
+          <div class="contact-card contact-touch-card">
+            <h3 class="contact-card-title">Get in Touch</h3>
+            <p class="contact-card-subtitle">
+              You can reach us directly using the form, or through any of the contact details below.
+            </p>
+
+            <div class="contact-channels-list">
+              <!-- Channel 1: Email Us -->
+              <div class="contact-channel-item">
+                <div class="channel-icon-badge badge-purple" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                     <polyline points="22,6 12,13 2,6"></polyline>
                   </svg>
                 </div>
-                <div>
-                  <p class="contact-item-label">Email Address</p>
-                  <a href="mailto:contact@neurokidsallies.com" class="contact-item-val">contact@neurokidsallies.com</a>
+                <div class="channel-content">
+                  <h4 class="channel-heading">Email Us</h4>
+                  <p class="channel-desc">For general enquiries, partnerships and collaboration opportunities.</p>
+                  <a href="mailto:info@neurokidsallies.com" class="channel-email-link">info@neurokidsallies.com</a>
                 </div>
               </div>
 
-              <!-- Instagram -->
-              <div class="contact-item-row">
-                <div class="contact-icon-bubble">
-                  <svg class="contact-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              <!-- Channel 2: Community Enquiries -->
+              <div class="contact-channel-item">
+                <div class="channel-icon-badge badge-purple" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                   </svg>
                 </div>
-                <div>
-                  <p class="contact-item-label">Instagram Community</p>
-                  <a href="https://www.instagram.com/neurokidsallies?igsh=NGVwZnY3bG5yYnE=" target="_blank" rel="noopener noreferrer" class="contact-item-val">
-                    @neurokidsallies
-                  </a>
+                <div class="channel-content">
+                  <h4 class="channel-heading">Community Enquiries</h4>
+                  <p class="channel-desc">Questions about our programs, resources or community spaces.</p>
+                  <a href="mailto:community@neurokidsallies.com" class="channel-email-link">community@neurokidsallies.com</a>
+                </div>
+              </div>
+
+              <!-- Channel 3: Partnerships -->
+              <div class="contact-channel-item">
+                <div class="channel-icon-badge badge-teal" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m11 17 2 2a1 1 0 0 0 1.4 0l6.6-6.6a2 2 0 0 0 0-2.8l-2.6-2.6a2 2 0 0 0-2.8 0L13 9.6"></path>
+                    <path d="m13 6.4-1.4-1.4a2 2 0 0 0-2.8 0L2.2 11.6a2 2 0 0 0 0 2.8l2.6 2.6a2 2 0 0 0 2.8 0L9 15.6"></path>
+                  </svg>
+                </div>
+                <div class="channel-content">
+                  <h4 class="channel-heading">Partnerships</h4>
+                  <p class="channel-desc">To discuss collaborations, workshops or speaking opportunities.</p>
+                  <a href="mailto:partnerships@neurokidsallies.com" class="channel-email-link">partnerships@neurokidsallies.com</a>
                 </div>
               </div>
             </div>
-
-            <p style="font-size: 0.8125rem; color: var(--color-text-subtle);">
-              NeuroKids Allies Inc. is dedicated to preventing stigma and building dignity for every child and family.
-            </p>
           </div>
 
-          <!-- Right: Authentic Lead-Capture / Subscribe Form -->
-          <div class="contact-form-side">
-            <h3 class="form-box-title">Subscribe for Allyship Resources</h3>
-            <p class="form-box-desc">
-              Join our community of parents, educators, and leaders creating neuro-affirming spaces. You'll hear from us soon.
+          <!-- Right Card: Send Us a Message Form -->
+          <div class="contact-card contact-message-card">
+            <h3 class="contact-card-title">Send Us a Message</h3>
+            <p class="contact-card-subtitle">
+              Fill in the form below and we'll get back to you soon.
             </p>
 
-            <div class="subscribe-action">
-              <a 
-                href="https://preview.mailerlite.io/forms/2009995/176619972987978844/share" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="btn btn-primary btn-lg" 
-                style="width: 100%; justify-content: center;"
-              >
-                <span>Subscribe To Receive Allyship Resources</span>
-                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <form class="contact-form-layout" id="contact-message-form">
+              <!-- Name Row (Two Columns) -->
+              <div class="form-row-two-col">
+                <div class="form-group">
+                  <label for="contact-first-name" class="form-label">First Name <span class="required-star">*</span></label>
+                  <input type="text" id="contact-first-name" name="firstName" required placeholder="Your first name" class="form-input">
+                </div>
+                <div class="form-group">
+                  <label for="contact-last-name" class="form-label">Last Name <span class="required-star">*</span></label>
+                  <input type="text" id="contact-last-name" name="lastName" required placeholder="Your last name" class="form-input">
+                </div>
+              </div>
+
+              <!-- Email Address Row -->
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email Address <span class="required-star">*</span></label>
+                <input type="email" id="contact-email" name="email" required placeholder="Your email address" class="form-input">
+              </div>
+
+              <!-- Subject Row -->
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Subject <span class="required-star">*</span></label>
+                <div class="select-field-wrap">
+                  <select id="contact-subject" name="subject" required class="form-input form-select">
+                    <option value="" disabled selected>Please select</option>
+                    <option value="General Enquiry">General Enquiry</option>
+                    <option value="Community Programs">Community Programs &amp; Spaces</option>
+                    <option value="Partnership">Partnerships &amp; Collaborations</option>
+                    <option value="Allyship Resources">Allyship Resources</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Your Message Row -->
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Your Message <span class="required-star">*</span></label>
+                <textarea id="contact-message" name="message" required rows="4" placeholder="Type your message here..." class="form-input form-textarea"></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary btn-lg contact-send-btn">
+                <span>Send Message</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                   <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- 3. Full-Width Subscribe Banner -->
+        <span id="get-involved" class="scroll-anchor-alias" aria-hidden="true"></span>
+        <div class="contact-subscribe-banner">
+          <div class="banner-left">
+            <div class="banner-icon-badge" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="banner-text">
+              <h3 class="banner-title">Subscribe for Allyship Resources</h3>
+              <p class="banner-desc">
+                Join our community of parents, educators and leaders creating neuro-affirming spaces. You'll hear from us soon.
+              </p>
+            </div>
+          </div>
+
+          <div class="banner-right">
+            <a href="https://preview.mailerlite.io/forms/2009995/176619972987978844/share" target="_blank" rel="noopener noreferrer" class="btn btn-primary banner-btn">
+              <span>Subscribe To Receive Allyship Resources</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <span class="banner-disclaimer">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              <span>No spam, ever. Unsubscribe anytime.</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- 4. Other Ways to Connect (3 Cards Grid) -->
+        <div class="other-connect-section">
+          <div class="other-connect-header">
+            <h3 class="other-connect-title">Other Ways to Connect</h3>
+            <p class="other-connect-subtitle">You can also reach us through the options below.</p>
+          </div>
+
+          <div class="other-connect-grid">
+            <!-- Card 1: Join the Community -->
+            <div class="connect-option-card card-purple-tint">
+              <div class="connect-icon-box box-purple" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+              </div>
+              <h4 class="connect-card-title">Join the Community</h4>
+              <p class="connect-card-desc">
+                Connect with other parents, caregivers, educators and allies.
+              </p>
+              <a href="https://preview.mailerlite.io/forms/2009995/176619972987978844/share" target="_blank" rel="noopener noreferrer" class="connect-action-link link-purple">
+                <span>Join Now</span>
+                <span class="link-arrow">&rarr;</span>
               </a>
             </div>
 
-            <p class="form-disclaimer">
-              🔒 No spam, ever. Unsubscribe anytime.
-            </p>
+            <!-- Card 2: Explore Our Resources -->
+            <div class="connect-option-card card-teal-tint">
+              <div class="connect-icon-box box-teal" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+              </div>
+              <h4 class="connect-card-title">Explore Our Resources</h4>
+              <p class="connect-card-desc">
+                Access practical tools, guides and helpful materials.
+              </p>
+              <a href="#what-we-do" class="connect-action-link link-teal">
+                <span>View Resources</span>
+                <span class="link-arrow">&rarr;</span>
+              </a>
+            </div>
+
+            <!-- Card 3: Share Your Story -->
+            <div class="connect-option-card card-pink-tint">
+              <div class="connect-icon-box box-pink" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </div>
+              <h4 class="connect-card-title">Share Your Story</h4>
+              <p class="connect-card-desc">
+                We'd love to hear about your experiences to help create change.
+              </p>
+              <a href="#contact" class="connect-action-link link-pink">
+                <span>Share Your Experience</span>
+                <span class="link-arrow">&rarr;</span>
+              </a>
+            </div>
           </div>
         </div>
+
       </div>
     </section>
   </main>
@@ -608,17 +841,17 @@
           <div class="footer-links-col">
             <p class="footer-col-title">Navigation</p>
             <a href="#about" class="footer-link">About</a>
-            <a href="#what-we-do" class="footer-link">What We Do</a>
-            <a href="#be-an-ally" class="footer-link">Be An Ally</a>
-            <a href="#get-involved" class="footer-link">Get Involved</a>
+            <a href="#what-we-do" class="footer-link">What we do</a>
             <a href="#resources" class="footer-link">Resources</a>
+            <a href="#get-involved" class="footer-link">Get involved</a>
+            <a href="#contact" class="footer-link">Contact us</a>
           </div>
 
           <!-- Community -->
           <div class="footer-links-col">
             <p class="footer-col-title">Connect</p>
             <a href="https://www.instagram.com/neurokidsallies?igsh=NGVwZnY3bG5yYnE=" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram</a>
-            <a href="mailto:contact@neurokidsallies.com" class="footer-link">contact@neurokidsallies.com</a>
+            <a href="mailto:info@neurokidsallies.com" class="footer-link">info@neurokidsallies.com</a>
             <a href="https://preview.mailerlite.io/forms/2009995/176619972987978844/share" target="_blank" rel="noopener noreferrer" class="footer-link">Newsletter Sign-up</a>
           </div>
         </div>
@@ -658,6 +891,6 @@
   </div>
 
   <!-- Main JavaScript File -->
-  <script src="app.js?v=1.5"></script>
+  <script src="app.js?v=2.1"></script>
 </body>
 </html>
