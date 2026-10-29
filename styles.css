@@ -3319,21 +3319,22 @@ p {
 /* Card 3 spans both columns */
 .resource-card-full-width {
   grid-column: 1 / -1;
-  grid-template-columns: 1fr 1.35fr;
-  gap: 2.5rem;
-  padding: 2.5rem 2.75rem;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 3rem;
+  padding: 3rem 3rem;
+  align-items: center;
 }
 
 .resource-item-card {
   background-color: #FFFFFF;
   border: 1px solid var(--color-border);
-  border-radius: 20px;
-  padding: 2.25rem 2.25rem;
-  box-shadow: 0 2px 12px -2px rgba(15, 23, 42, 0.04);
+  border-radius: 24px;
+  padding: 2.5rem 2.25rem;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
   transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 1.75rem;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 2rem;
   align-items: center;
   position: relative;
 }
@@ -3341,7 +3342,7 @@ p {
 .resource-item-card:hover {
   transform: translateY(-3px);
   border-color: #CBD5E1;
-  box-shadow: 0 14px 30px -6px rgba(15, 23, 42, 0.07);
+  box-shadow: 0 16px 36px -6px rgba(15, 23, 42, 0.08);
 }
 
 .resource-card-content {
@@ -3394,16 +3395,26 @@ p {
   color: var(--color-accent);
 }
 
-/* Resource Card Media Boxes & Images */
+/* Resource Card Media Boxes & High-Readability Large Images */
 .resource-card-media-box {
   width: 100%;
-  height: 250px;
+  height: 380px;
+  min-height: 340px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: 18px;
+  background-color: #FAFAFD;
+  border: 1px solid #E2E8F0;
+  cursor: zoom-in;
+  transition: all var(--transition-base);
+}
+
+.resource-card-media-box:hover {
+  border-color: #CBD5E1;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
 
 .resource-card-img {
@@ -3414,53 +3425,162 @@ p {
 
 .resource-img-contain {
   object-fit: contain;
-  filter: drop-shadow(0 8px 18px rgba(15, 23, 42, 0.08));
+  padding: 0.75rem;
+  filter: drop-shadow(0 10px 22px rgba(15, 23, 42, 0.1));
   transition: transform var(--transition-base);
 }
 
-.resource-item-card:hover .resource-img-contain {
-  transform: scale(1.03);
+.resource-card-media-box:hover .resource-img-contain {
+  transform: scale(1.04);
 }
 
 .resource-img-cover {
-  object-fit: cover;
-  border-radius: 16px;
-  border: 1px solid var(--color-border);
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+  object-fit: contain;
+  padding: 0.5rem;
+  border-radius: 18px;
   transition: transform var(--transition-base);
 }
 
-.resource-item-card:hover .resource-img-cover {
-  transform: scale(1.02);
+.resource-card-media-box:hover .resource-img-cover {
+  transform: scale(1.03);
 }
 
+/* Wide Media Box for Communities Infographic */
 .resource-wide-media-box {
   width: 100%;
   height: auto;
-  max-height: 330px;
+  min-height: 420px;
+  max-height: 520px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: 18px;
   background-color: #FFFFFF;
   border: 1px solid var(--color-border);
-  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+  cursor: zoom-in;
+  transition: all var(--transition-base);
+}
+
+.resource-wide-media-box:hover {
+  border-color: #CBD5E1;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
 }
 
 .resource-wide-img {
   width: 100%;
   height: auto;
-  max-height: 320px;
+  max-height: 500px;
   object-fit: contain;
   display: block;
-  border-radius: 14px;
+  border-radius: 16px;
   transition: transform var(--transition-base);
 }
 
-.resource-card-full-width:hover .resource-wide-img {
-  transform: scale(1.015);
+.resource-wide-media-box:hover .resource-wide-img {
+  transform: scale(1.02);
+}
+
+/* Zoom Hint Badge on Hover */
+.media-zoom-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: #FFFFFF;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: all var(--transition-fast);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.resource-card-media-box:hover .media-zoom-badge,
+.resource-wide-media-box:hover .media-zoom-badge {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Image Lightbox Modal */
+.lightbox-overlay {
+  background-color: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 4000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.lightbox-overlay.open {
+  display: flex;
+  opacity: 1;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 92vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 82vh;
+  object-fit: contain;
+  border-radius: 14px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  background-color: #FFFFFF;
+}
+
+.lightbox-close-btn {
+  position: absolute;
+  top: -46px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #FFFFFF;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.lightbox-close-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.08);
+}
+
+.lightbox-caption {
+  color: #F8FAFC;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  margin-top: 0.85rem;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 /* Resource Image Placeholders (Reserved Space for Images) */
@@ -3556,13 +3676,22 @@ p {
   .resource-item-card,
   .resource-card-full-width {
     grid-template-columns: 1fr;
-    padding: 2rem 1.75rem;
-    gap: 1.75rem;
+    padding: 2.25rem 1.75rem;
+    gap: 2rem;
+  }
+
+  .resource-card-media-box {
+    height: 320px;
+  }
+
+  .resource-wide-media-box {
+    min-height: 280px;
+    max-height: 400px;
   }
 
   .resource-card-img-placeholder,
   .resource-wide-img-placeholder {
-    height: 200px;
+    height: 220px;
   }
 }
 

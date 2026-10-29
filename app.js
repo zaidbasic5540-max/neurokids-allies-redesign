@@ -73,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPillarAlignment();
   initBlogInteractions();
   initResourceInteractions();
+  initImageLightbox();
 });
 
 /**
@@ -618,6 +619,75 @@ function initResourceInteractions() {
     });
   });
 }
+
+/**
+ * ------------------------------------------------------------------------------
+ * Resource Image Lightbox Modal
+ * Allows users to click on any resource card visual to view it enlarged
+ * with maximum resolution, clarity, and readability.
+ * ------------------------------------------------------------------------------
+ */
+function initImageLightbox() {
+  const modal = document.getElementById('image-lightbox-modal');
+  const modalImg = document.getElementById('lightbox-img');
+  const caption = document.getElementById('lightbox-caption');
+  const closeBtn = document.getElementById('lightbox-close-btn');
+
+  if (!modal || !modalImg) return;
+
+  const openLightbox = (imgSrc, imgAlt) => {
+    modalImg.src = imgSrc;
+    modalImg.alt = imgAlt || 'Resource Preview';
+    if (caption) {
+      caption.textContent = imgAlt || '';
+    }
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeLightbox = () => {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  // Attach click & enter listeners to all resource media containers
+  const mediaBoxes = document.querySelectorAll('.resource-card-media-box, .resource-wide-media-box');
+  mediaBoxes.forEach(box => {
+    const img = box.querySelector('img');
+    if (!img) return;
+
+    box.addEventListener('click', () => {
+      openLightbox(img.src, img.alt);
+    });
+
+    box.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openLightbox(img.src, img.alt);
+      }
+    });
+  });
+
+  // Close handlers
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeLightbox);
+  }
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) {
+      closeLightbox();
+    }
+  });
+}
+
 
 
 
