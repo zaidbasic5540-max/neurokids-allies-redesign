@@ -681,7 +681,6 @@ function initResourceAlignment() {
 function initImageLightbox() {
   const modal = document.getElementById('image-lightbox-modal');
   const modalImg = document.getElementById('lightbox-img');
-  const caption = document.getElementById('lightbox-caption');
   const closeBtn = document.getElementById('lightbox-close-btn');
 
   if (!modal || !modalImg) return;
@@ -689,9 +688,6 @@ function initImageLightbox() {
   const openLightbox = (imgSrc, imgAlt) => {
     modalImg.src = imgSrc;
     modalImg.alt = imgAlt || 'Resource Preview';
-    if (caption) {
-      caption.textContent = imgAlt || '';
-    }
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';

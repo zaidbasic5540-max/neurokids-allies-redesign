@@ -3556,7 +3556,7 @@ p {
 
 .lightbox-img {
   max-width: 100%;
-  max-height: 82vh;
+  max-height: 88vh;
   object-fit: contain;
   border-radius: 14px;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
@@ -3583,15 +3583,6 @@ p {
 .lightbox-close-btn:hover {
   background: rgba(255, 255, 255, 0.4);
   transform: scale(1.08);
-}
-
-.lightbox-caption {
-  color: #F8FAFC;
-  font-size: 0.9375rem;
-  font-weight: 600;
-  margin-top: 0.85rem;
-  text-align: center;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 /* Resource Image Placeholders (Reserved Space for Images) */
