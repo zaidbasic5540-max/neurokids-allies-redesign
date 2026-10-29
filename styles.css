@@ -3368,22 +3368,17 @@ p {
   margin-bottom: 1.5rem;
 }
 
-/* Baseline equal-height alignment for Row 1 resource cards */
-@media (min-width: 1101px) {
-  .resources-cards-grid > .resource-item-card:not(.resource-card-full-width) .resource-card-title {
-    min-height: 3.9rem;
-  }
-  .resources-cards-grid > .resource-item-card:not(.resource-card-full-width) .resource-card-desc {
-    min-height: 8.5rem;
-  }
-}
-
 /* Actions Row: Explore Button + Coming Soon Badge */
 .resource-actions-row {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 0.75rem;
+}
+
+/* Push actions row to bottom of card content to align Explore Resources buttons */
+.resource-card-content .resource-actions-row {
+  margin-top: auto;
 }
 
 .badge-coming-soon {

@@ -637,23 +637,21 @@ function initResourceAlignment() {
     const cards = document.querySelectorAll('.resources-cards-grid > .resource-item-card:not(.resource-card-full-width)');
     if (cards.length < 2) return;
 
+    const actionRows = Array.from(cards).map(c => c.querySelector('.resource-actions-row')).filter(Boolean);
     const titles = Array.from(cards).map(c => c.querySelector('.resource-card-title')).filter(Boolean);
     const descs = Array.from(cards).map(c => c.querySelector('.resource-card-desc')).filter(Boolean);
 
-    // Reset inline min-heights first to measure true natural content height
+    // Keep title and desc at natural flow so content starts immediately after its heading
     titles.forEach(el => el.style.minHeight = '');
     descs.forEach(el => el.style.minHeight = '');
 
     // Threshold matches .resources-cards-grid multi-column layout (above 1100px)
-    if (window.innerWidth > 1100) {
-      if (titles.length >= 2) {
-        const maxTitleH = Math.max(...titles.map(el => el.offsetHeight));
-        titles.forEach(el => el.style.minHeight = `${maxTitleH}px`);
-      }
-      if (descs.length >= 2) {
-        const maxDescH = Math.max(...descs.map(el => el.offsetHeight));
-        descs.forEach(el => el.style.minHeight = `${maxDescH}px`);
-      }
+    if (window.innerWidth > 1100 && actionRows.length >= 2) {
+      actionRows.forEach(el => el.style.minHeight = '');
+      const maxActionH = Math.max(...actionRows.map(el => el.offsetHeight));
+      actionRows.forEach(el => el.style.minHeight = `${maxActionH}px`);
+    } else {
+      actionRows.forEach(el => el.style.minHeight = '');
     }
   };
 
