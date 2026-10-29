@@ -73,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPillarAlignment();
   initBlogInteractions();
   initResourceInteractions();
+  initResourceAlignment();
   initImageLightbox();
 });
 
@@ -618,6 +619,56 @@ function initResourceInteractions() {
       showToast(`"${resourceTitle}" is currently in preparation and will be available soon! Join our community to receive it upon release.`);
     });
   });
+}
+
+/**
+ * ------------------------------------------------------------------------------
+ * Dynamic Resource Card Elements Alignment (Resources Page)
+ * Ensures:
+ * 1. Titles in Card 1 (Peers) and Card 2 (Family & Friends) align to the exact same height.
+ * 2. Descriptions in Card 1 and Card 2 align to the exact same height.
+ * 3. As a direct result, both "Explore Resources" buttons in Row 1
+ *    START AT THE EXACT SAME VERTICAL HEIGHT.
+ * ------------------------------------------------------------------------------
+ */
+function initResourceAlignment() {
+  const alignResourceCards = () => {
+    // Only target the side-by-side cards in Row 1 (exclude full-width bottom card)
+    const cards = document.querySelectorAll('.resources-cards-grid > .resource-item-card:not(.resource-card-full-width)');
+    if (cards.length < 2) return;
+
+    const titles = Array.from(cards).map(c => c.querySelector('.resource-card-title')).filter(Boolean);
+    const descs = Array.from(cards).map(c => c.querySelector('.resource-card-desc')).filter(Boolean);
+
+    // Reset inline min-heights first to measure true natural content height
+    titles.forEach(el => el.style.minHeight = '');
+    descs.forEach(el => el.style.minHeight = '');
+
+    // Threshold matches .resources-cards-grid multi-column layout (above 1100px)
+    if (window.innerWidth > 1100) {
+      if (titles.length >= 2) {
+        const maxTitleH = Math.max(...titles.map(el => el.offsetHeight));
+        titles.forEach(el => el.style.minHeight = `${maxTitleH}px`);
+      }
+      if (descs.length >= 2) {
+        const maxDescH = Math.max(...descs.map(el => el.offsetHeight));
+        descs.forEach(el => el.style.minHeight = `${maxDescH}px`);
+      }
+    }
+  };
+
+  alignResourceCards();
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(alignResourceCards, 40);
+  });
+
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(alignResourceCards);
+  }
+  window.addEventListener('load', alignResourceCards);
 }
 
 /**
