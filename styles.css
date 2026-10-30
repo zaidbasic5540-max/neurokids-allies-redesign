@@ -1708,13 +1708,16 @@ p {
   border-color: var(--color-border-hover);
 }
 
-.why-heading-col {
+.why-heading-col,
+.statement-heading-col {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.why-title {
+.why-title,
+.vision-title,
+.mission-title {
   font-family: var(--font-sans);
   font-size: clamp(2.35rem, 3.6vw, 3rem);
   font-weight: 800;
@@ -1726,7 +1729,8 @@ p {
   margin: 0;
 }
 
-.why-title-line {
+.why-title-line,
+.statement-title-line {
   display: block;
 }
 
@@ -1804,29 +1808,6 @@ p {
 .statement-card:hover {
   box-shadow: var(--shadow-card);
   border-color: var(--color-border-hover);
-}
-
-.statement-heading-col {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.vision-title,
-.mission-title {
-  font-family: var(--font-sans);
-  font-size: clamp(2.35rem, 3.6vw, 3rem);
-  font-weight: 800;
-  color: var(--color-text-main);
-  line-height: 1.12;
-  letter-spacing: -0.025em;
-  position: relative;
-  display: inline-block;
-  margin: 0;
-}
-
-.statement-title-line {
-  display: block;
 }
 
 .vision-title::after {
