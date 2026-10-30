@@ -1966,7 +1966,7 @@ p {
   font-size: 1.25rem;
   font-weight: 700;
   color: #FFFFFF;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0;
 }
 
 .founder-role-tag {
@@ -2005,7 +2005,7 @@ p {
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 
 .meta-tag {
