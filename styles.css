@@ -2248,14 +2248,18 @@ p {
   font-size: 0.9375rem;
   justify-content: center;
   margin-top: 0.35rem;
-  background-color: var(--color-brand-purple);
-  box-shadow: 0 4px 14px rgba(118, 93, 239, 0.3);
+  background-color: #B9E0DB;
+  color: #0F172A;
+  border: 1px solid rgba(14, 116, 144, 0.18);
+  box-shadow: 0 4px 14px rgba(185, 224, 219, 0.45);
 }
 
 .contact-send-btn:hover {
-  background-color: var(--color-brand-purple-hover);
+  background-color: #A5D6D0;
+  color: #0F172A;
+  border-color: rgba(14, 116, 144, 0.28);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(118, 93, 239, 0.4);
+  box-shadow: 0 8px 20px rgba(185, 224, 219, 0.65);
 }
 
 /* 3. Full-Width Subscribe Banner */
