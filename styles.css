@@ -515,6 +515,18 @@ p {
   letter-spacing: 0.04em;
   padding: 0.65rem 1.15rem;
   white-space: nowrap;
+  background-color: #B9E0DB;
+  color: #0F172A;
+  border: 1px solid rgba(14, 116, 144, 0.18);
+  box-shadow: 0 4px 14px rgba(185, 224, 219, 0.45);
+}
+
+.nav-cta-btn:hover {
+  background-color: #A5D6D0;
+  color: #0F172A;
+  border-color: rgba(14, 116, 144, 0.28);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(185, 224, 219, 0.65);
 }
 
 @media (min-width: 640px) {
@@ -609,6 +621,21 @@ p {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+}
+
+.mobile-cta-wrapper .btn-primary {
+  background-color: #B9E0DB;
+  color: #0F172A;
+  border: 1px solid rgba(14, 116, 144, 0.18);
+  box-shadow: 0 4px 14px rgba(185, 224, 219, 0.45);
+}
+
+.mobile-cta-wrapper .btn-primary:hover {
+  background-color: #A5D6D0;
+  color: #0F172A;
+  border-color: rgba(14, 116, 144, 0.28);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(185, 224, 219, 0.65);
 }
 
 /* ==============================================================================
@@ -750,15 +777,18 @@ p {
 }
 
 .hero-btn-filled {
-  background-color: var(--color-brand-purple);
-  color: #FFFFFF;
-  box-shadow: 0 10px 25px -4px rgba(118, 93, 239, 0.45);
+  background-color: #B9E0DB;
+  color: #0F172A;
+  border: 1px solid rgba(14, 116, 144, 0.18);
+  box-shadow: 0 4px 14px rgba(185, 224, 219, 0.45);
 }
 
 .hero-btn-filled:hover {
-  background-color: var(--color-brand-purple-hover);
+  background-color: #A5D6D0;
+  color: #0F172A;
+  border-color: rgba(14, 116, 144, 0.28);
   transform: translateY(-2px);
-  box-shadow: 0 14px 28px -4px rgba(118, 93, 239, 0.55);
+  box-shadow: 0 8px 20px rgba(185, 224, 219, 0.65);
 }
 
 .btn-hero-outline {
