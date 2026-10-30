@@ -2952,7 +2952,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 620px;
+  max-width: 660px;
 }
 
 .blog-hero-title {
@@ -2977,10 +2977,10 @@ p {
 }
 
 .blog-hero-desc {
-  font-size: 1.125rem;
-  line-height: 1.7;
+  font-size: clamp(1.05rem, 1.4vw, 1.125rem);
+  line-height: 1.65;
   color: #E2E8F0;
-  max-width: 540px;
+  max-width: 580px;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
