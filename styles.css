@@ -2116,7 +2116,7 @@ p {
 .contact-channels-list {
   display: flex;
   flex-direction: column;
-  gap: 1.85rem;
+  gap: 1.65rem;
 }
 
 .contact-channel-item {
@@ -2146,6 +2146,12 @@ p {
   background-color: #ECFEFF;
   color: #0E7490;
   border: 1px solid #BAE6FD;
+}
+
+.channel-icon-badge.badge-pink {
+  background-color: #FDF2F8;
+  color: var(--color-brand-pink);
+  border: 1px solid #FBCFE8;
 }
 
 .channel-content {
@@ -2181,44 +2187,50 @@ p {
   text-decoration: underline;
 }
 
-/* Touch Connect Grid inside Get in Touch card */
-.touch-connect-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1.15rem;
-  margin-top: 1.85rem;
+.channel-action-link {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all var(--transition-fast);
 }
 
-.contact-touch-card .connect-option-card {
-  background-color: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 18px;
-  padding: 1.35rem 1.45rem;
-  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.03);
+.channel-action-link.link-purple {
+  color: var(--color-brand-purple);
 }
 
-.contact-touch-card .connect-option-card:hover {
-  transform: translateY(-2px);
-  border-color: #CBD5E1;
-  box-shadow: 0 6px 16px -2px rgba(15, 23, 42, 0.06);
+.channel-action-link.link-purple:hover {
+  color: var(--color-brand-purple-hover);
+  text-decoration: underline;
 }
 
-.contact-touch-card .connect-icon-box {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 0.85rem;
-  border-radius: 10px;
+.channel-action-link.link-teal {
+  color: #0E7490;
 }
 
-.contact-touch-card .connect-card-title {
-  font-size: 1.05rem;
-  margin-bottom: 0.35rem;
+.channel-action-link.link-teal:hover {
+  color: #0891B2;
+  text-decoration: underline;
 }
 
-.contact-touch-card .connect-card-desc {
-  font-size: 0.875rem;
-  margin-bottom: 0.85rem;
-  line-height: 1.5;
+.channel-action-link.link-pink {
+  color: var(--color-brand-pink);
+}
+
+.channel-action-link.link-pink:hover {
+  color: var(--color-brand-pink-hover);
+  text-decoration: underline;
+}
+
+.channel-action-link .link-arrow {
+  display: inline-block;
+  transition: transform var(--transition-fast);
+}
+
+.channel-action-link:hover .link-arrow {
+  transform: translateX(3px);
 }
 
 /* Form Styles */
