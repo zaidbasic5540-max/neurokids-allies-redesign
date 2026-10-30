@@ -3768,10 +3768,10 @@ p {
 .what-we-do-hero-header {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
   max-width: 820px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .what-we-do-pill {
@@ -3831,8 +3831,8 @@ p {
 }
 
 .value-card-icon-circle {
-  width: 56px;
-  height: 56px;
+  width: 68px;
+  height: 68px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -3845,8 +3845,8 @@ p {
 }
 
 .value-card-icon {
-  width: 28px;
-  height: 28px;
+  width: 36px;
+  height: 36px;
 }
 
 .value-card-label {
