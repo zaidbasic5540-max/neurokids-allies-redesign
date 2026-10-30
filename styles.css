@@ -1684,8 +1684,7 @@ p {
 .why-section {
   background-color: #FFFFFF;
   padding-top: 3.5rem;
-  padding-bottom: 3.5rem;
-  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 1.75rem;
 }
 
 .why-card {
@@ -1760,7 +1759,7 @@ p {
 @media (max-width: 900px) {
   .why-section {
     padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    padding-bottom: 1.25rem;
   }
   
   .why-card {
@@ -1779,7 +1778,7 @@ p {
    ============================================================================== */
 .vision-section {
   background-color: #FFFFFF;
-  padding-top: 3.5rem;
+  padding-top: 1.75rem;
   padding-bottom: 1.75rem;
 }
 
@@ -1861,7 +1860,7 @@ p {
 
 @media (max-width: 900px) {
   .vision-section {
-    padding-top: 2.25rem;
+    padding-top: 1.25rem;
     padding-bottom: 1.25rem;
   }
 
