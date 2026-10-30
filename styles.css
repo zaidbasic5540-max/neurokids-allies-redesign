@@ -3757,86 +3757,158 @@ p {
   padding: 4.5rem 0 3.5rem;
   background-color: #FFFFFF;
   position: relative;
+  overflow: hidden;
 }
 
-.what-we-do-hero-grid {
+.what-we-do-hero-banner {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: 3.5rem;
   align-items: center;
+  gap: 2rem;
+  min-height: 250px;
 }
 
-.what-we-do-hero-content {
+.what-we-do-hero-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.what-we-do-hero-title {
-  font-family: 'Nunito', var(--font-sans);
-  font-size: clamp(2.75rem, 5vw, 4rem);
-  font-weight: 900;
-  color: var(--color-text-main);
-  line-height: 1.1;
-  margin-bottom: 0.85rem;
-  letter-spacing: -0.02em;
-}
-
-.what-we-do-hero-subtitle {
-  font-family: var(--font-sans);
-  font-size: clamp(1.2rem, 2.3vw, 1.45rem);
-  font-weight: 800;
-  color: var(--color-text-main);
-  line-height: 1.35;
-  margin-bottom: 1rem;
-}
-
-.what-we-do-hero-highlight {
+.what-we-do-pill {
+  display: inline-block;
+  background: #F3EEFE;
   color: var(--color-brand-purple);
+  font-size: 0.75rem;
   font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.95rem;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
 }
 
-.what-we-do-hero-desc {
-  font-size: 1.125rem;
-  line-height: 1.7;
-  color: var(--color-text-muted);
-  max-width: 540px;
-  margin-bottom: 1.5rem;
+.what-we-do-hero-title {
+  font-family: var(--font-sans);
+  font-size: clamp(2.35rem, 4.2vw, 3.4rem);
+  font-weight: 800;
+  color: #1E293B;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin: 1.15rem 0 0.85rem;
 }
 
-.what-we-do-hero-content .values-trio {
-  justify-content: flex-start;
-  margin-top: 0.25rem;
-  margin-bottom: 0;
-  gap: 2.75rem;
+.what-we-do-hero-lead {
+  font-size: clamp(1.05rem, 1.4vw, 1.1875rem);
+  color: #475569;
+  line-height: 1.6;
+  max-width: 520px;
+  margin: 0;
 }
 
-/* What We Do Hero Placeholder */
-.what-we-do-hero-placeholder {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  min-height: 280px;
-  background: linear-gradient(135deg, #F8FAFC 0%, #EEF2F6 50%, #F1F5F9 100%);
-  border: 2px dashed #CBD5E1;
-  border-radius: var(--radius-xl);
+.what-we-do-hero-media {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.what-we-do-hero-img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* 3 Core Values Cards Row (Awareness, Understanding, Allyship) */
+.values-cards-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3.25rem;
+}
+
+.value-card {
+  border-radius: 20px;
+  padding: 2.25rem 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  padding: 2rem;
   text-align: center;
-  box-shadow: var(--shadow-card);
-  position: relative;
-  overflow: hidden;
+  gap: 0.95rem;
+  transition: all var(--transition-base);
+  cursor: default;
 }
 
-.what-we-do-hero-placeholder::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at top right, rgba(118, 93, 239, 0.05), transparent 70%);
-  pointer-events: none;
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px -4px rgba(15, 23, 42, 0.08);
+}
+
+.value-card-icon-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-base);
+}
+
+.value-card:hover .value-card-icon-circle {
+  transform: scale(1.08);
+}
+
+.value-card-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.value-card-label {
+  font-family: var(--font-sans);
+  font-size: 1.1875rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+/* Card 1: Awareness (Soft Mint/Teal) */
+.value-card-awareness {
+  background-color: #F0FAFA;
+}
+
+.value-card-awareness .value-card-icon-circle {
+  background-color: #D7F0EE;
+  color: #0E7490;
+}
+
+.value-card-awareness .value-card-label {
+  color: #0E7490;
+}
+
+/* Card 2: Understanding (Soft Lavender/Purple) */
+.value-card-understanding {
+  background-color: #F8F0FE;
+}
+
+.value-card-understanding .value-card-icon-circle {
+  background-color: #EBD6FA;
+  color: #765DEF;
+}
+
+.value-card-understanding .value-card-label {
+  color: #765DEF;
+}
+
+/* Card 3: Allyship (Soft Blue/Cyan) */
+.value-card-allyship {
+  background-color: #EBF5FD;
+}
+
+.value-card-allyship .value-card-icon-circle {
+  background-color: #D3E9FA;
+  color: #0284C7;
+}
+
+.value-card-allyship .value-card-label {
+  color: #0284C7;
 }
 
 /* What We Do Main Pillars Section */
@@ -3854,27 +3926,34 @@ p {
   margin-top: 0;
 }
 
-@media (max-width: 1024px) {
-  .what-we-do-hero-grid {
+@media (max-width: 900px) {
+  .what-we-do-hero-banner {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .what-we-do-hero-section {
-    padding: 3rem 0 2rem;
+    gap: 2rem;
   }
 
-  .what-we-do-main-section {
-    padding: 2.5rem 0 4.5rem;
+  .what-we-do-hero-media {
+    justify-content: center;
+  }
+
+  .what-we-do-hero-img {
+    max-width: 420px;
   }
 }
 
 @media (max-width: 640px) {
-  .what-we-do-hero-content .values-trio {
-    gap: 1.5rem;
-    justify-content: center;
-    width: 100%;
+  .what-we-do-hero-section {
+    padding: 3rem 0 2rem;
+  }
+
+  .values-cards-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .value-card {
+    padding: 1.75rem 1.25rem;
+    border-radius: 16px;
   }
 }

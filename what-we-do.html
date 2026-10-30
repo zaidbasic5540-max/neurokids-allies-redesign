@@ -21,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=5.0">
+  <link rel="stylesheet" href="styles.css?v=5.1">
 </head>
 <body class="what-we-do-page">
 
@@ -92,73 +92,63 @@
 
   <main id="main-content">
     <!-- =========================================================================
-         WHAT WE DO HERO SECTION
+         WHAT WE DO HERO SECTION (Matching Design)
          ========================================================================= -->
     <section class="what-we-do-hero-section" aria-labelledby="what-we-do-hero-title">
       <div class="container">
-        <div class="what-we-do-hero-grid">
-          <div class="what-we-do-hero-content">
-            <h1 id="what-we-do-hero-title" class="what-we-do-hero-title">What We Do</h1>
-            <div class="what-we-do-hero-subtitle">
-              Breaking down attitudinal barriers.<br>
-              <span class="what-we-do-hero-highlight">Choosing to understand.</span>
+        <!-- Top Hero Banner (Text Left, Hands Heart Image Right) -->
+        <div class="what-we-do-hero-banner">
+          <div class="what-we-do-hero-text">
+            <div class="what-we-do-pill">
+              <span>WHAT WE DO</span>
             </div>
-            <p class="what-we-do-hero-desc">
-              Recognizing the barriers we create for others is the first step to changing them. We empower peers, families, community spaces, and policy advocates with practical tools and neuro-affirming guidance.
+            <h1 id="what-we-do-hero-title" class="what-we-do-hero-title">
+              Breaking down<br>attitudinal barriers.
+            </h1>
+            <p class="what-we-do-hero-lead">
+              Recognizing the barriers we create for others is the first step to changing them.
             </p>
-
-            <!-- Values Trio: Awareness, Understanding, Allyship -->
-            <div class="values-trio" role="list" aria-label="Core Pillars: Awareness, Understanding, Allyship">
-              <!-- Pillar 1: Awareness -->
-              <div class="value-item value-purple" role="listitem">
-                <div class="value-icon-box" aria-hidden="true">
-                  <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
-                    <circle cx="12" cy="12" r="3"></circle>
-                  </svg>
-                </div>
-                <span class="value-label">AWARENESS</span>
-              </div>
-
-              <!-- Pillar 2: Understanding -->
-              <div class="value-item value-pink" role="listitem">
-                <div class="value-icon-box" aria-hidden="true">
-                  <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
-                  </svg>
-                </div>
-                <span class="value-label">UNDERSTANDING</span>
-              </div>
-
-              <!-- Pillar 3: Allyship -->
-              <div class="value-item value-teal" role="listitem">
-                <div class="value-icon-box" aria-hidden="true">
-                  <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                  </svg>
-                </div>
-                <span class="value-label">ALLYSHIP</span>
-              </div>
-            </div>
           </div>
 
-          <!-- Non-image Styled Graphic Placeholder -->
-          <div class="what-we-do-hero-placeholder" role="img" aria-label="What We Do visual slot">
-            <div class="placeholder-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="m4.93 4.93 4.24 4.24"></path>
-                <path d="m14.83 9.17 4.24-4.24"></path>
-                <path d="m14.83 14.83 4.24 4.24"></path>
-                <path d="m9.17 14.83-4.24 4.24"></path>
-                <circle cx="12" cy="12" r="4"></circle>
+          <div class="what-we-do-hero-media" aria-hidden="true">
+            <img src="Images/what-we-do-hero-photo.png" alt="Hands sharing a wooden heart" class="what-we-do-hero-img" width="519" height="258">
+          </div>
+        </div>
+
+        <!-- 3 Core Values Cards Row (Awareness, Understanding, Allyship) -->
+        <div class="values-cards-row" role="list" aria-label="Core Pillars: Awareness, Understanding, Allyship">
+          <!-- Card 1: Awareness -->
+          <div class="value-card value-card-awareness" role="listitem">
+            <div class="value-card-icon-circle" aria-hidden="true">
+              <svg class="value-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
               </svg>
-              <span>Core Focus Areas</span>
             </div>
-            <p class="placeholder-subtext">Empowering communities to build authentically neuro-inclusive social spaces</p>
+            <span class="value-card-label">Awareness</span>
+          </div>
+
+          <!-- Card 2: Understanding -->
+          <div class="value-card value-card-understanding" role="listitem">
+            <div class="value-card-icon-circle" aria-hidden="true">
+              <svg class="value-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+              </svg>
+            </div>
+            <span class="value-card-label">Understanding</span>
+          </div>
+
+          <!-- Card 3: Allyship -->
+          <div class="value-card value-card-allyship" role="listitem">
+            <div class="value-card-icon-circle" aria-hidden="true">
+              <svg class="value-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <span class="value-card-label">Allyship</span>
           </div>
         </div>
       </div>
