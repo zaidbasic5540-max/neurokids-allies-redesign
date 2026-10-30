@@ -218,11 +218,13 @@ function initNavigation() {
 
   // Active section indicator on scroll
   function highlightActiveNav() {
-    // If on blog page or resources page, keep the active nav link and do not override
+    // If on blog, resources or what-we-do page, keep the active nav link and do not override
     if (document.body.classList.contains('blog-page') || 
         document.body.classList.contains('resources-page') || 
+        document.body.classList.contains('what-we-do-page') || 
         window.location.pathname.endsWith('blog.html') || 
-        window.location.pathname.endsWith('resources.html')) {
+        window.location.pathname.endsWith('resources.html') || 
+        window.location.pathname.endsWith('what-we-do.html')) {
       return;
     }
 
@@ -232,12 +234,10 @@ function initNavigation() {
     // Section definitions with their corresponding primary nav href
     const sectionTargets = [
       { id: 'why-we-exist', href: '#about' },
-      { id: 'what-we-do', href: '#what-we-do' },
-      { id: 'resources', href: '#resources' },
       { id: 'our-vision', href: '#about' },
       { id: 'our-mission', href: '#about' },
       { id: 'founder', href: '#about' },
-      { id: 'contact', href: '#contact' },
+      { id: 'contact', href: '#get-involved' },
       { id: 'get-involved', href: '#get-involved' }
     ];
 

@@ -3715,3 +3715,142 @@ p {
   }
 }
 
+
+
+/* ==============================================================================
+   WHAT WE DO DEDICATED PAGE
+   ============================================================================== */
+.what-we-do-page {
+  background-color: #FFFFFF;
+}
+
+.what-we-do-hero-section {
+  padding: 4.5rem 0 3.5rem;
+  background-color: #FFFFFF;
+  position: relative;
+}
+
+.what-we-do-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.what-we-do-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.what-we-do-hero-title {
+  font-family: 'Nunito', var(--font-sans);
+  font-size: clamp(2.75rem, 5vw, 4rem);
+  font-weight: 900;
+  color: var(--color-text-main);
+  line-height: 1.1;
+  margin-bottom: 0.85rem;
+  letter-spacing: -0.02em;
+}
+
+.what-we-do-hero-subtitle {
+  font-family: var(--font-sans);
+  font-size: clamp(1.2rem, 2.3vw, 1.45rem);
+  font-weight: 800;
+  color: var(--color-text-main);
+  line-height: 1.35;
+  margin-bottom: 1rem;
+}
+
+.what-we-do-hero-highlight {
+  color: var(--color-brand-purple);
+  font-weight: 800;
+}
+
+.what-we-do-hero-desc {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  max-width: 540px;
+  margin-bottom: 1.5rem;
+}
+
+.what-we-do-hero-content .values-trio {
+  justify-content: flex-start;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+  gap: 2.75rem;
+}
+
+/* What We Do Hero Placeholder */
+.what-we-do-hero-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  min-height: 280px;
+  background: linear-gradient(135deg, #F8FAFC 0%, #EEF2F6 50%, #F1F5F9 100%);
+  border: 2px dashed #CBD5E1;
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+}
+
+.what-we-do-hero-placeholder::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(118, 93, 239, 0.05), transparent 70%);
+  pointer-events: none;
+}
+
+/* What We Do Main Pillars Section */
+.what-we-do-main-section {
+  padding: 4rem 0 6rem;
+  background-color: #FAFAFC;
+  border-top: 1px solid var(--color-border);
+}
+
+.what-we-do-main-section .section-header {
+  margin-bottom: 3.5rem;
+}
+
+.what-we-do-main-section .pillars-grid {
+  margin-top: 0;
+}
+
+/* Subscribe Banner on What We Do Page */
+.what-we-do-main-section .contact-subscribe-banner {
+  margin-top: 5rem;
+}
+
+@media (max-width: 1024px) {
+  .what-we-do-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .what-we-do-hero-section {
+    padding: 3rem 0 2rem;
+  }
+
+  .what-we-do-main-section {
+    padding: 2.5rem 0 4.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .what-we-do-hero-content .values-trio {
+    gap: 1.5rem;
+    justify-content: center;
+    width: 100%;
+  }
+}
