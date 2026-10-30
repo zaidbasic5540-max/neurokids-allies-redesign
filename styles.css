@@ -1775,14 +1775,14 @@ p {
    ============================================================================== */
 .vision-section {
   background-color: #FFFFFF;
-  padding-top: 3.25rem;
+  padding-top: 3.5rem;
   padding-bottom: 1.75rem;
 }
 
 .mission-section {
   background-color: #FFFFFF;
   padding-top: 1.75rem;
-  padding-bottom: 3.25rem;
+  padding-bottom: 3.5rem;
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -1790,10 +1790,14 @@ p {
   background-color: #FFFFFF;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
-  padding: 2.75rem 3.25rem;
+  padding: 3.25rem 3.5rem;
   box-shadow: var(--shadow-subtle);
-  max-width: 980px;
+  max-width: 1040px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 3.5rem;
+  align-items: flex-start;
   transition: all var(--transition-base);
 }
 
@@ -1802,21 +1806,27 @@ p {
   border-color: var(--color-border-hover);
 }
 
-.statement-content {
-  width: 100%;
+.statement-heading-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .vision-title,
 .mission-title {
   font-family: var(--font-sans);
-  font-size: clamp(1.85rem, 2.8vw, 2.35rem);
+  font-size: clamp(2.35rem, 3.6vw, 3rem);
   font-weight: 800;
   color: var(--color-text-main);
-  margin-bottom: 1.35rem;
-  line-height: 1.25;
+  line-height: 1.12;
   letter-spacing: -0.025em;
   position: relative;
   display: inline-block;
+  margin: 0;
+}
+
+.statement-title-line {
+  display: block;
 }
 
 .vision-title::after {
@@ -1826,7 +1836,7 @@ p {
   height: 3.5px;
   background: linear-gradient(90deg, var(--color-brand-teal), var(--color-brand-purple));
   border-radius: var(--radius-full);
-  margin-top: 0.6rem;
+  margin-top: 0.85rem;
 }
 
 .mission-title::after {
@@ -1836,7 +1846,7 @@ p {
   height: 3.5px;
   background: linear-gradient(90deg, var(--color-brand-purple), var(--color-brand-pink));
   border-radius: var(--radius-full);
-  margin-top: 0.6rem;
+  margin-top: 0.85rem;
 }
 
 .statement-text-body {
@@ -1880,12 +1890,14 @@ p {
   }
 
   .statement-card {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
     padding: 2.25rem 1.65rem;
   }
 
   .vision-title,
   .mission-title {
-    margin-bottom: 1.15rem;
+    font-size: 2.25rem;
   }
 }
 
