@@ -4087,19 +4087,19 @@ p {
   color: #0E7490;
 }
 
-/* Card 2: Understanding (Soft Purple) */
+/* Card 2: Understanding (Light Grey + Black text/logo) */
 .value-card-understanding {
-  background-color: #FAF5FF;
-  border: 1px solid rgba(124, 58, 237, 0.08);
+  background-color: #F8FAFC;
+  border: 1px solid rgba(15, 23, 42, 0.08);
 }
 
 .value-card-understanding .value-card-icon-circle {
-  background-color: #EDE9FE;
-  color: #6D28D9;
+  background-color: #EEF2F6;
+  color: #0F172A;
 }
 
 .value-card-understanding .value-card-label {
-  color: #6D28D9;
+  color: #0F172A;
 }
 
 /* Card 3: Allyship (Soft Blue/Cyan) */
